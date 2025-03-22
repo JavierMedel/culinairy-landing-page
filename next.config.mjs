@@ -11,7 +11,7 @@ const nextConfig = {
     ],
   },
   // Removed 'output: export' to enable API routes
-  distDir: 'out', // Specify build directory for Netlify
+  // Removed 'distDir: out' for Vercel compatibility
 };
 
 export default nextConfig;
