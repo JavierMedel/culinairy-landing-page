@@ -35,10 +35,11 @@ const EmailPopup = ({ triggerText, isLoading = false }: EmailPopupProps) => {
       });
 
       const data = await response.json();
+      console.log('API response:', { status: response.status, data });
 
       if (response.ok) {
         setStatus('success');
-        setMessage(data.message);
+        setMessage(data.message || 'Successfully joined the waitlist!');
         setEmail('');
         // Close the popup after a short delay on success
         setTimeout(() => {
@@ -46,9 +47,11 @@ const EmailPopup = ({ triggerText, isLoading = false }: EmailPopupProps) => {
         }, 2000);
       } else {
         setStatus('error');
-        setMessage(data.error);
+        setMessage(data.error || 'Failed to join waitlist. Please try again.');
+        console.error('API error:', data);
       }
     } catch (error) {
+      console.error('Submission error:', error);
       setStatus('error');
       setMessage('Failed to join waitlist. Please try again.');
     }

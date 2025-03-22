@@ -15,15 +15,29 @@ export async function POST(request: Request) {
 
     // Create a Supabase client with the service role key for server-side operations
     // This bypasses RLS policies
-    const supabaseAdmin = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-      process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-    );
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+    
+    // Log for debugging (will be removed in production)
+    console.log('Supabase URL:', supabaseUrl);
+    console.log('Service Key exists:', !!supabaseServiceKey);
+    
+    if (!supabaseUrl || !supabaseServiceKey) {
+      console.error('Missing Supabase credentials');
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
+    
+    const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
     // Store the email in Supabase using the admin client
-    const { error } = await supabaseAdmin
+    const { error, data } = await supabaseAdmin
       .from('waitlist')
       .insert([{ email, created_at: new Date().toISOString() }]);
+      
+    console.log('Supabase response:', data, error);
 
     if (error) {
       // Check if it's a duplicate email error
@@ -34,9 +48,16 @@ export async function POST(request: Request) {
         );
       }
       
-      console.error('Supabase error:', error);
+      // Log detailed error information
+      console.error('Supabase error details:', {
+        code: error.code,
+        message: error.message,
+        details: error.details,
+        hint: error.hint
+      });
+      
       return NextResponse.json(
-        { error: 'Failed to join waitlist' },
+        { error: 'Failed to join waitlist: ' + error.message },
         { status: 500 }
       );
     }

@@ -10,7 +10,7 @@ const nextConfig = {
       },
     ],
   },
-  output: 'export', // For static site generation
+  // Removed 'output: export' to enable API routes
   distDir: 'out', // Specify build directory for Netlify
 };
 
