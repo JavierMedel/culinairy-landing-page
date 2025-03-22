@@ -5,7 +5,8 @@ const CulinAIryLogo = () => {
     <div className="flex items-center">
       <span className="text-xl font-bold tracking-tight">
         <span className="text-culinairy-teal">Culin</span>
-        <span className="text-culinairy-cyan">AIry</span>
+        <span className="text-culinairy-cyan">AI</span>
+        <span className="text-culinairy-teal">ry</span>
       </span>
     </div>
   );

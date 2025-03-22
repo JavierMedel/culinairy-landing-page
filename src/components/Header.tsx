@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import CulinAIryLogo from './CulinAIryLogo';
-import { Button } from '@/components/ui/button';
+import EmailPopup from '@/components/EmailPopup';
 
 const Header = () => {
   return (
@@ -15,12 +15,16 @@ const Header = () => {
       </div>
       <div className="flex items-center space-x-4">
         <nav className="hidden md:flex space-x-6 mr-4 text-gray-300">
-          <Link href="/" className="hover:text-white transition-colors">
-            Recipes
-          </Link>
-          <Link href="/" className="hover:text-white transition-colors">
-            Meal Plans
-          </Link>
+          <a
+            href="#features"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="hover:text-white transition-colors cursor-pointer"
+          >
+            Features
+          </a>
           <a
             href="#faq"
             onClick={(e) => {
@@ -32,9 +36,7 @@ const Header = () => {
             FAQs
           </a>
         </nav>
-        <Button className="bg-culinairy-teal hover:bg-culinairy-lightTeal text-white rounded-full">
-          Join Waitlist
-        </Button>
+        <EmailPopup triggerText="Join Waitlist" />
       </div>
     </header>
   );

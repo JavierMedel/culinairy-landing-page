@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
+import EmailPopup from '@/components/EmailPopup';
 
 const Hero = () => {
   return (
@@ -14,9 +14,7 @@ const Hero = () => {
       <p className="text-gray-400 max-w-xl mx-auto mb-8 text-lg">
         Effortless meal planning with AI-curated recipes, step-by-step visual guides, and smart shopping lists. CulinAIry adapts to your tastes, making cooking simple, fun, and inspiring.
       </p>
-      <Button className="bg-culinairy-teal hover:bg-culinairy-lightTeal rounded-full text-white px-8 py-6 text-lg h-auto">
-        Join Waitlist
-      </Button>
+      <EmailPopup triggerText="Join Waitlist" />
 
       <div className="mt-12 w-full max-w-4xl relative">
         <Image

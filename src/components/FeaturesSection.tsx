@@ -62,7 +62,7 @@ const CalendarDay = ({ day, recipe, highlight = false, leftover = false }: { day
 
 const FeaturesSection = () => {
   return (
-    <section className="w-full py-16 px-4">
+    <section id="features" className="w-full py-16 px-4 scroll-mt-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {/* Smart Recipe Recommendations */}
         <FeatureCard
