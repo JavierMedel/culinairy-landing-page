@@ -14,7 +14,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4">
-        <nav className="hidden md:flex space-x-6 mr-4 text-white">
+        <nav className="hidden md:flex items-center justify-center space-x-6 mr-4 text-white">
           <a
             href="#features"
             onClick={(e) => {
@@ -29,7 +29,8 @@ const Header = () => {
             href="#faq"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });            }}
+              document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
           >
             FAQs

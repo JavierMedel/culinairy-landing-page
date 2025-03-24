@@ -1,15 +1,35 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ComparisonSection = () => {
   return (
     <section className="w-full py-16 px-4 md:px-0">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: "easeInOut",
+        }}
+        className="text-3xl md:text-4xl font-bold text-center mb-12"
+      >
         Tired of Stressful Meal Planning?
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {/* The Old Way */}
-        <div className="bg-gray-900 rounded-xl p-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
+          className="bg-gray-900 rounded-xl p-8"
+        >
           <h3 className="text-xl font-semibold mb-6 text-white">The Old Way</h3>
           <ul className="space-y-4">
             <li className="flex items-start">
@@ -29,10 +49,19 @@ const ComparisonSection = () => {
               <span className="text-gray-300">Boring, uninspiring meal presentations making cooking feel like a chore</span>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* The MealMind Way */}
-        <div className="bg-gray-900 rounded-xl p-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.4,
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
+          className="bg-gray-900 rounded-xl p-8"
+        >
           <h3 className="text-xl font-semibold mb-6 text-white">The MealMind Way</h3>
           <ul className="space-y-4">
             <li className="flex items-start">
@@ -52,7 +81,7 @@ const ComparisonSection = () => {
               <span className="text-gray-300">Intelligent meal planning calendar that integrates with your schedule and suggests creative ways to use leftovers</span>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
