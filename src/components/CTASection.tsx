@@ -35,12 +35,12 @@ const CTASection = () => {
   };
 
   return (
-    <section className="w-full py-16 px-4 bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkCyan rounded-3xl mx-auto max-w-6xl my-12">
+    <section className="w-full py-16 px-4 bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue rounded-3xl mx-auto max-w-6xl my-12 border border-culinairy-teal/30">
       <div className="flex flex-col items-center text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 max-w-2xl leading-tight">
           Stop spending hours planning<br />your weekly meals
         </h2>
-        <p className="text-gray-300 mb-8 max-w-xl">
+        <p className="text-culinairy-lightGray mb-8 max-w-xl">
           Save up to 2 hours weekly while enjoying healthier, budget-friendly meals
         </p>
         <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
@@ -56,7 +56,7 @@ const CTASection = () => {
             <Button 
               type="submit" 
               disabled={status === 'loading'}
-              className="bg-culinairy-teal hover:bg-culinairy-lightTeal rounded-full text-white px-8 py-3 h-auto disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-culinairy-teal hover:bg-culinairy-lightTeal rounded-full text-white px-12 py-5 h-auto text-xl font-semibold shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? 'Joining...' : 'Join Waitlist →'}
             </Button>

@@ -18,7 +18,7 @@ const FeatureCard = ({
   className = ""
 }: FeatureCardProps) => {
   return (
-    <Card className={`bg-gray-900 border-gray-800 hover:border-gray-700 transition-all shadow-lg ${className}`}>
+    <Card className={`bg-gray-900 border-gray-800 hover:border-culinairy-teal/50 transition-all shadow-lg ${className}`}>
       <CardHeader className="pb-2">
         {imageComponent ? (
           <div className="mb-4">{imageComponent}</div>
@@ -36,7 +36,7 @@ const FeatureCard = ({
         <CardTitle className="text-xl font-semibold text-white">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-gray-300">{description}</p>
+        <p className="text-culinairy-lightGray">{description}</p>
       </CardContent>
     </Card>
   );

@@ -52,11 +52,15 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         culinairy: {
-          teal: "#20B2AA",
-          lightTeal: "#5ECECA",
-          darkTeal: "#1A8C86",
-          cyan: "#4DD0E1",
-          darkCyan: "#00838F",
+          teal: "#00A0B0",          // Brighter, more saturated teal
+          lightTeal: "#4ECDC4",     // Lighter, more vibrant teal
+          darkTeal: "#00726A",      // Richer dark teal
+          cyan: "#5D5FEF",          // Slightly darker, more saturated cyan
+          darkCyan: "#00838F",      // Kept original
+          darkBlue: "#2E1A47",      // Darker blue for better contrast
+          gray: "#6b6869",          // Added for consistency
+          darkGray: "#2A2329",      // Darker gray for better contrast
+          lightGray: "#E6E1E8"      // Lighter gray for better contrast
         },
       },
       borderRadius: {

@@ -67,10 +67,10 @@ const EmailPopup = ({ triggerText, isLoading = false }: EmailPopupProps) => {
           {isLoading ? 'Loading...' : triggerText}
         </Button>
       </SheetTrigger>
-      <SheetContent className="bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkCyan border-culinairy-teal">
+      <SheetContent className="bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue border-culinairy-teal/70 shadow-lg">
         <SheetHeader className="text-white">
           <SheetTitle className="text-2xl font-bold text-white">Join Our Waitlist</SheetTitle>
-          <SheetDescription className="text-gray-300">
+          <SheetDescription className="text-culinairy-lightGray">
             Be the first to know when CulinAIry launches and get exclusive early access.
           </SheetDescription>
         </SheetHeader>

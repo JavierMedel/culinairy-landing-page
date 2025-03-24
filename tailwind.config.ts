@@ -53,16 +53,16 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom colors based on the website
+        // Custom colors based on the website with enhanced contrast
         culinairy: {
-          teal: "#5da5b3",
-          lightTeal: "#6ebfcf",
-          cyan: "#6b6ef2",
-          darkBlue: "#39245e",
-          darkTeal: "#30655f",
-          gray: "#6b6869",
-          darkGray: "#3b3136",
-          lightGray: "#d4cfd5"
+          teal: "#00A0B0",          // Brighter, more saturated teal
+          lightTeal: "#4ECDC4",     // Lighter, more vibrant teal
+          cyan: "#5D5FEF",          // Slightly darker, more saturated cyan
+          darkBlue: "#2E1A47",      // Darker blue for better contrast
+          darkTeal: "#00726A",      // Richer dark teal
+          gray: "#6b6869",          // Kept original
+          darkGray: "#2A2329",      // Darker gray for better contrast
+          lightGray: "#E6E1E8"      // Lighter gray for better contrast
         }
       },
       borderRadius: {

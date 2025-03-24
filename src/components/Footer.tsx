@@ -11,15 +11,15 @@ const Footer = () => {
           © {currentYear} CulinAIry. All rights reserved.
         </div>
         <div className="flex items-center space-x-6 text-sm">
-          <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+          <Link href="/terms" className="text-culinairy-lightGray hover:text-white transition-colors">
             Terms
           </Link>
-          <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+          <Link href="/privacy" className="text-culinairy-lightGray hover:text-white transition-colors">
             Privacy
           </Link>
           <a
             href="mailto:hello@culinairy.ai"
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-culinairy-lightGray hover:text-white transition-colors"
           >
             Contact
           </a>
