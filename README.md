@@ -111,4 +111,4 @@ This project is proprietary and confidential.
 
 ## Contact
 
-For questions or inquiries, please contact [hello@culinairy.ai](mailto:hello@culinairy.ai).
+For questions or inquiries, please contact [hello@culinairy.io](mailto:hello@culinairy.io).
