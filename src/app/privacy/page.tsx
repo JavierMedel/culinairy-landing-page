@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
               <li><strong>Right to Withdraw Consent</strong> – Withdraw previously given consent at any time.</li>
             </ul>
             <p className="mt-4">
-              To exercise these rights, contact us at <a href="mailto:privacy@culinairy.com" className="text-culinairy-teal hover:underline">privacy@culinairy.com</a>.
+              To exercise these rights, contact us at <a href="mailto:privacy@culinairy.io" className="text-culinairy-teal hover:underline">privacy@culinairy.io</a>.
             </p>
           </section>
 
@@ -171,7 +171,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-xl font-semibold mb-4 text-white">Contact Information & Data Protection Requests</h2>
             <p className="mb-4">
               For questions about this Privacy Policy or GDPR-related requests, contact us at: 
-              <a href="mailto:privacy@culinairy.com" className="text-culinairy-teal hover:underline ml-1">privacy@culinairy.com</a>.
+              <a href="mailto:privacy@culinairy.com" className="text-culinairy-teal hover:underline ml-1">privacy@culinairy.io</a>.
             </p>
           </section>
         </div>

@@ -18,7 +18,7 @@ const Footer = () => {
             Privacy
           </Link>
           <a
-            href="mailto:hello@culinairy.ai"
+            href="mailto:hello@culinairy.io"
             className="text-culinairy-lightGray hover:text-white transition-colors"
           >
             Contact
