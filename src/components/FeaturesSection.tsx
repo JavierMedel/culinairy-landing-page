@@ -203,12 +203,22 @@ const FeaturesSection = () => {
               <div className="mb-3">
                 <div className="text-xs text-gray-400 mb-2">AI-Generated Food Photography</div>
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="aspect-square bg-gray-700 rounded-md overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-culinairy-teal/20 to-culinairy-darkTeal/30"></div>
+                  <div className="aspect-square rounded-md overflow-hidden relative">
+                    <Image
+                      src="/images/chicken-chow-mein.jpg"
+                      alt="AI Generated Chicken Chow Mein"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                    />
                     <div className="absolute bottom-1 left-1 text-[10px] bg-black/70 text-white px-1.5 py-0.5 rounded">AI</div>
                   </div>
-                  <div className="aspect-square bg-gray-700 rounded-md overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-culinairy-teal/20 to-culinairy-darkTeal/30"></div>
+                  <div className="aspect-square rounded-md overflow-hidden relative">
+                    <Image
+                      src="/images/lemony-beef-orzo.jpg"
+                      alt="AI Generated Lemony Beef Orzo"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                    />
                     <div className="absolute bottom-1 left-1 text-[10px] bg-black/70 text-white px-1.5 py-0.5 rounded">AI</div>
                   </div>
                 </div>
@@ -216,32 +226,32 @@ const FeaturesSection = () => {
               <div>
                 <div className="text-xs text-gray-400 mb-2">Step-by-Step Cooking Process</div>
                 <div className="flex space-x-2">
-                  <div className="w-1/3 aspect-square bg-gray-700 rounded-md relative flex items-center justify-center">
-                    <div className="text-[10px] text-white">1</div>
-                    <div className="absolute bottom-1 right-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-culinairy-teal" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12z" clipRule="evenodd" />
-                      </svg>
-                    </div>
+                  <div className="w-1/3 aspect-square rounded-md overflow-hidden relative">
+                    <Image
+                      src="/images/mango-glazed-chicken.jpg"
+                      alt="Step 1: Preparation"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                    <div className="absolute bottom-1 left-1 text-[10px] bg-black/70 text-white px-1.5 py-0.5 rounded">1</div>
                   </div>
-                  <div className="w-1/3 aspect-square bg-gray-700 rounded-md relative flex items-center justify-center">
-                    <div className="text-[10px] text-white">2</div>
-                    <div className="absolute bottom-1 right-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-culinairy-teal" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12z" clipRule="evenodd" />
-                      </svg>
-                    </div>
+                  <div className="w-1/3 aspect-square rounded-md overflow-hidden relative">
+                    <Image
+                      src="/images/pork-burgers.jpg"
+                      alt="Step 2: Cooking"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                    <div className="absolute bottom-1 left-1 text-[10px] bg-black/70 text-white px-1.5 py-0.5 rounded">2</div>
                   </div>
-                  <div className="w-1/3 aspect-square bg-gray-700 rounded-md relative flex items-center justify-center">
-                    <div className="text-[10px] text-white">3</div>
-                    <div className="absolute bottom-1 right-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-culinairy-teal" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12z" clipRule="evenodd" />
-                      </svg>
-                    </div>
+                  <div className="w-1/3 aspect-square rounded-md overflow-hidden relative">
+                    <Image
+                      src="/images/smothered-pork-chops.jpg"
+                      alt="Step 3: Plating"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                    <div className="absolute bottom-1 left-1 text-[10px] bg-black/70 text-white px-1.5 py-0.5 rounded">3</div>
                   </div>
                 </div>
               </div>

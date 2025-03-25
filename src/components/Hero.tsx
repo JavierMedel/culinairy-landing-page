@@ -1,10 +1,26 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import EmailPopup from '@/components/EmailPopup';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
+  const images = [
+    '/images/culinAIry-image-01.jpeg',
+    '/images/culinAIry-image-02.png',
+    '/images/culinAIry-image-03.png',
+    '/images/culinAIry-image-04.png'
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section className="w-full py-12 md:py-24 flex flex-col items-center justify-center text-center">
       <div className="w-full flex flex-col items-center justify-center">
@@ -15,7 +31,7 @@ const Hero = () => {
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+            delay: 0.5,
             duration: 0.8,
             ease: "easeInOut",
           }}
@@ -46,14 +62,24 @@ const Hero = () => {
         >
           <EmailPopup triggerText="Join Waitlist" />
         </motion.div>
-        <div className="mt-12 w-full max-w-4xl relative">
-          <Image
-            src="\images\culinAIry-image-01.jpeg"
-            alt="CulinAIry Dashboard"
-            width={1200}
-            height={675}
-            className="rounded-lg border border-gray-800 shadow-xl"
-          />
+        <div className="mt-12 w-full max-w-4xl relative overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentImageIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image
+                src={images[currentImageIndex]}
+                alt={`CulinAIry Dashboard ${currentImageIndex + 1}`}
+                width={1200}
+                height={675}
+                className="rounded-lg border border-gray-800 shadow-xl"
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>

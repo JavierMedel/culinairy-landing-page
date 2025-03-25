@@ -35,6 +35,12 @@ const Header = () => {
           >
             FAQs
           </a>
+          <Link
+            href="/recipes"
+            className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
+          >
+            Recipes
+          </Link>
         </nav>
         <EmailPopup triggerText="Join Waitlist" />
       </div>
