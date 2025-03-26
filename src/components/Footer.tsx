@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="w-full py-6 px-4 border-t border-gray-800 mt-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="text-gray-500 text-sm mb-4 md:mb-0">
-          © {currentYear} CulinAIry. All rights reserved.
+          © {currentYear} CulinAIry.io. All rights reserved.
         </div>
         <div className="flex items-center space-x-6 text-sm">
           <Link href="/terms" className="text-culinairy-lightGray hover:text-white transition-colors">

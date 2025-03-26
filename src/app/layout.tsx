@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CulinAIry – Smart AI-Powered Meal Planning",
-  description: "Effortless meal planning with AI-curated recipes, step-by-step visual guides, and smart shopping lists. CulinAIry adapts to your tastes, making cooking simple, fun, and inspiring.",
+  title: "CulinAIry.io – Smart AI-Powered Meal Planning",
+  description: "Effortless meal planning with AI-curated recipes, step-by-step visual guides, and smart shopping lists. CulinAIry.io adapts to your tastes, making cooking simple, fun, and inspiring.",
 };
 
 export default function RootLayout({

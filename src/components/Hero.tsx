@@ -37,7 +37,7 @@ const Hero = () => {
           }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-culinairy-teal to-culinairy-cyan max-w-4xl mb-4"
         >
-          CulinAIry – Smart<br />AI-Powered Meal Planning
+          CulinAIry.io – Smart<br />AI-Powered Meal Planning
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 50 }}
@@ -49,7 +49,7 @@ const Hero = () => {
           }}
           className="text-culinairy-lightGray max-w-xl mx-auto mb-8 text-lg"
         >
-          Effortless meal planning with AI-curated recipes, step-by-step visual guides, and smart shopping lists. CulinAIry adapts to your tastes, making cooking simple, fun, and inspiring.
+          Effortless meal planning with AI-curated recipes, step-by-step visual guides, and smart shopping lists. CulinAIry.io adapts to your tastes, making cooking simple, fun, and inspiring.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

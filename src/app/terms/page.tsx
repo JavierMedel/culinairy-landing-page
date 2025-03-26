@@ -4,8 +4,8 @@ import CulinAIryLogo from '@/components/CulinAIryLogo';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - CulinAIry',
-  description: 'Terms of Service for CulinAIry - Smart AI-Powered Meal Planning',
+  title: 'Terms of Service - CulinAIry.io',
+  description: 'Terms of Service for CulinAIry.io - Smart AI-Powered Meal Planning'
 };
 
 const TermsOfService = () => {
@@ -26,7 +26,7 @@ const TermsOfService = () => {
         <div className="space-y-8">
           <section>
             <p className="mb-4">
-              Welcome to CulinAIry (the "Service"), operated by CulinAIry ("Company," "we," "us," or "our"). 
+              Welcome to CulinAIry.io (the "Service"), operated by CulinAIry.io ("Company," "we," "us," or "our"). 
               By accessing or using our Service, you agree to these Terms of Service ("Terms"). 
               If you do not agree, do not use the Service.
             </p>
@@ -144,7 +144,7 @@ const TermsOfService = () => {
       <footer className="w-full py-6 px-4 border-t border-gray-800 mt-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} CulinAIry. All rights reserved.
+            © {new Date().getFullYear()} CulinAIry.io. All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm">
             <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">

@@ -4,8 +4,8 @@ import CulinAIryLogo from '@/components/CulinAIryLogo';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - CulinAIry',
-  description: 'Privacy Policy for CulinAIry - Smart AI-Powered Meal Planning',
+  title: 'Privacy Policy - CulinAIry.io',
+  description: 'Privacy Policy for CulinAIry.io - Smart AI-Powered Meal Planning'
 };
 
 const PrivacyPolicy = () => {
@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
         <div className="space-y-8">
           <section>
             <p className="mb-4">
-              CulinAIry ("we," "us," or "our") is committed to protecting your privacy. 
+              CulinAIry.io ("we," "us," or "our") is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, and share information about you when you use our Service.
             </p>
           </section>
@@ -180,7 +180,7 @@ const PrivacyPolicy = () => {
       <footer className="w-full py-6 px-4 border-t border-gray-800 mt-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} CulinAIry. All rights reserved.
+            © {new Date().getFullYear()} CulinAIry.io. All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm">
             <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">

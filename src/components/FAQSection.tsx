@@ -8,12 +8,12 @@ import {
 
 const faqs = [
   {
-    question: "How does CulinAIry create personalized recipe suggestions?",
-    answer: "CulinAIry uses AI to analyze your preferences, dietary restrictions, past recipe ratings, and available ingredients to suggest recipes you'll love. The more you use the app, the better it learns your taste preferences and meal planning habits."
+    question: "How does CulinAIry.io create personalized recipe suggestions?",
+    answer: "CulinAIry.io uses AI to analyze your preferences, dietary restrictions, past recipe ratings, and available ingredients to suggest recipes you'll love. The more you use the app, the better it learns your taste preferences and meal planning habits."
   },
   {
     question: "Can I set dietary preferences or restrictions?",
-    answer: "Yes! CulinAIry supports various dietary preferences and restrictions including vegetarian, vegan, gluten-free, keto, low-carb, dairy-free, nut-free, and more. You can also specify ingredients you want to avoid or include."
+    answer: "Yes! CulinAIry.io supports various dietary preferences and restrictions including vegetarian, vegan, gluten-free, keto, low-carb, dairy-free, nut-free, and more. You can also specify ingredients you want to avoid or include."
   },
   {
     question: "How does the shopping list feature work?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "How do the AI-generated food visuals work?",
-    answer: "CulinAIry uses advanced AI to create beautiful, realistic images of completed recipes to inspire you. You can also upload your own step-by-step cooking photos to document your process and share with others. This visual approach makes meal planning more engaging and helps you better visualize the end result."
+    answer: "CulinAIry.io uses advanced AI to create beautiful, realistic images of completed recipes to inspire you. You can also upload your own step-by-step cooking photos to document your process and share with others. This visual approach makes meal planning more engaging and helps you better visualize the end result."
   }
 ];
 

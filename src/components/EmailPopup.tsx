@@ -71,7 +71,7 @@ const EmailPopup = ({ triggerText, isLoading = false }: EmailPopupProps) => {
         <SheetHeader className="text-white">
           <SheetTitle className="text-2xl font-bold text-white">Join Our Waitlist</SheetTitle>
           <SheetDescription className="text-culinairy-lightGray">
-            Be the first to know when CulinAIry launches and get exclusive early access.
+            Be the first to know when CulinAIry.io launches and get exclusive early access.
           </SheetDescription>
         </SheetHeader>
         <div className="mt-8">

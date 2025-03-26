@@ -5,8 +5,8 @@ import CulinAIryLogo from '@/components/CulinAIryLogo';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Recipes - CulinAIry',
-  description: 'Discover AI-powered recipes tailored to your taste - CulinAIry',
+  title: 'Recipes - CulinAIry.io',
+  description: 'Discover AI-powered recipes tailored to your taste - CulinAIry.io'
 };
 
 interface Recipe {
@@ -192,7 +192,7 @@ const RecipesPage = () => {
       <footer className="w-full py-6 px-4 border-t border-gray-800 mt-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} CulinAIry. All rights reserved.
+            © {new Date().getFullYear()} CulinAIry.io. All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm">
             <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
