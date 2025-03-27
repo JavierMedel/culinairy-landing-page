@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import CulinAIryLogo from '@/components/CulinAIryLogo';
@@ -42,11 +42,15 @@ interface Recipe {
   steps: Step[];
 }
 
+async function getRecipeById(id: string) {
+  return recipesData.recipes.find((r): r is Recipe => r.id === id);
+}
 // Define the component with proper typing for Next.js App Router
-export default function RecipeDetail({ params }: { params: { id: string } }) {
-  // In Next.js App Router, params is directly accessible in async components
-  const id = params.id;
-  const recipe = recipesData.recipes.find((r): r is Recipe => r.id === decodeURIComponent(id));
+export default async function RecipeDetail({ params }: { params: { id: string } }) {
+  const { id } = await params;
+  console.log('Recipe ID:', id);
+  console.log('Params:', params);
+  const recipe = await getRecipeById(decodeURIComponent(id));
   if (!recipe) return <div>Recipe not found</div>;
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
@@ -165,7 +169,7 @@ export default function RecipeDetail({ params }: { params: { id: string } }) {
       <footer className="w-full py-6 px-4 border-t border-gray-800 mt-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} CulinAIry. All rights reserved.
+            © {new Date().getFullYear()} CulinAIry.io All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm">
             <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms</Link>
