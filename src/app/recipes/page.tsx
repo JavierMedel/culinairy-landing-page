@@ -3,86 +3,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import CulinAIryLogo from '@/components/CulinAIryLogo';
 import { Metadata } from 'next';
+import recipesData from '@/lib/recipes.json';
 
 export const metadata: Metadata = {
   title: 'Recipes - CulinAIry.io',
   description: 'Discover AI-powered recipes tailored to your taste - CulinAIry.io'
 };
 
-interface Recipe {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  cookTime: string;
-  prepTime: string;
-  calories: number;
-  tags: string[];
-}
-
-
-const recipes: Recipe[] = [
-  {
-    id: '1',
-    title: 'Chicken Chow Mein-Style Noodles',
-    description: 'with Stir-fried Veggies and Peanuts',
-    image: '/images/dishes/Chicken_Chow_Mein_Style_Noodlesw.png',
-    cookTime: '35 min',
-    prepTime: '8 min',
-    calories: 820,
-    tags: ['Family Friendly', 'Protein Plus']
-  },
-  {
-    id: '2',
-    title: 'Lemony Beef and Orzo Bowls',
-    description: 'with Feta and Sweet Peppers',
-    image: '/images/dishes/Lemony_Beef_and_Orzo_Bowlswith_F.png',
-    cookTime: '25 min',
-    prepTime: '8 min',
-    calories: 800,
-    tags: ['Family Friendly', 'Quick']
-  },
-  {
-    id: '3',
-    title: 'Salisbury Steak-Style Pork Patties and Mash',
-    description: 'with Shallot Gravy and Apple Salad',
-    image: '/images/dishes/Salisbury_Steak_Style_Pork_Patti.png',
-    cookTime: '40 min',
-    prepTime: '8 min',
-    calories: 860,
-    tags: ['Family Friendly']
-  },
-  {
-    id: '4',
-    title: 'Mango-Glazed Caribbean-Style Chicken',
-    description: 'with Creamy Coleslaw and Green Onion-Lime Rice',
-    image: '/images/dishes/Mango_Glazed_Caribbean_Style_Chi.png',
-    cookTime: '30 min',
-    prepTime: '5 min',
-    calories: 840,
-    tags: ['Low CO2']
-  },
-  {
-    id: '5',
-    title: 'Smothered Pork Chops',
-    description: 'with Fusilli and Garlicky Broccoli',
-    image: '/images/dishes/Smothered_Pork_Chopswith_Fusilli.png',
-    cookTime: '35 min',
-    prepTime: '8 min',
-    calories: 800,
-    tags: ['New', 'Protein Plus']
-  },
-  {
-    id: '6',
-    title: 'Sweet and Savoury Pork Burgers',
-    description: 'with Herby Fries and Dijonnaise',
-    image: '/images/dishes/Sweet_and_Savoury_Pork_Burgerswi.png',
-    cookTime: '30 min',
-    prepTime: '10 min',
-    calories: 1230,
-    tags: ['Discovery']
-  }
-];
+const recipes = recipesData.recipes;
 
 const RecipesPage = () => {
   return (
@@ -105,9 +33,9 @@ const RecipesPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recipes.map((recipe) => (
-            <Link
-              key={recipe.id}
-              href={`/recipes/${recipe.id}`}
+              <Link
+                key={recipe.id}
+                href={`/recipes/${encodeURIComponent(recipe.id)}`}
               className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 block"
             >
               <div className="relative h-48 w-full">

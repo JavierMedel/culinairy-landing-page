@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import CulinAIryLogo from '@/components/CulinAIryLogo';
+import recipesData from '@/lib/recipes.json';
 
 interface Ingredient {
   name: string;
@@ -9,40 +10,35 @@ interface Ingredient {
   amount: string;
 }
 
-const ingredients: Ingredient[] = [
-  {
-    name: 'Ground Beef',
-    image: '/images/ingredients/Ground_Beef.png',
-    amount: '250g'
-  },
-  {
-    name: 'Orzo',
-    image: '/images/ingredients/Orzo.png',
-    amount: '170g'
-  },
-  {
-    name: 'Sweet Bell Pepper',
-    image: '/images/ingredients/Sweet_Bell_Pepper.png',
-    amount: '160g'
-  },
-  {
-    name: 'Baby Spinach',
-    image: '/images/ingredients/Baby_Spinach.png',
-    amount: '56g'
-  },
-  {
-    name: 'Baby Tomatoes',
-    image: '/images/ingredients/Baby_Tomatoes.png',
-    amount: '113g'
-  },
-  {
-    name: 'Feta Cheese',
-    image: '/images/ingredients/Feta_Cheese.png',
-    amount: '1/2 cup'
-  }
-];
+interface Step {
+  number: number;
+  instruction: string;
+  image: string;
+}
 
-export default function RecipeDetail() {
+interface Recipe {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  cookTime: string;
+  prepTime: string;
+  calories: number;
+  tags: string[];
+  detailedDescription: string;
+  ingredients: Ingredient[];
+  steps: Step[];
+}
+
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function RecipeDetail({ params }: PageProps) {
+  const recipe = recipesData.recipes.find((r): r is Recipe => r.id === decodeURIComponent(params.id));
+  if (!recipe) return <div>Recipe not found</div>;
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
       <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800">
@@ -68,21 +64,21 @@ export default function RecipeDetail() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="relative aspect-square rounded-lg overflow-hidden">
               <Image
-                src="/images/dishes/Lemony_Beef_and_Orzo_Bowlswith_F.png"
-                alt="Lemony Beef and Orzo Bowls"
+                src={recipe.image}
+                alt={recipe.title}
                 fill
                 className="object-cover"
               />
             </div>
 
             <div>
-              <h1 className="text-4xl font-bold mb-4 text-white">Lemony Beef and Orzo Bowls</h1>
-              <p className="text-gray-400 text-lg mb-6">with Feta and Sweet Peppers</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">{recipe.title}</h1>
+              <p className="text-gray-400 text-lg mb-6">{recipe.description}</p>
 
               <div className="bg-gray-700/30 rounded-lg p-6 mb-8">
-                <p className="text-gray-300 leading-relaxed">
-                  A delightful Mediterranean-inspired dish that combines perfectly seasoned ground beef with tender orzo pasta. The bright citrus notes from fresh lemon complement the savory meat, while sweet bell peppers add color and crunch. Finished with crumbled feta cheese for a creamy, tangy touch, this bowl is both satisfying and refreshing.
-                </p>
+              <p className="text-gray-300 leading-relaxed">
+                {recipe.detailedDescription}
+              </p>
               </div>
 
               <div className="flex items-center space-x-4 mb-8">
@@ -116,7 +112,7 @@ export default function RecipeDetail() {
           <div className="mt-12">
             <h2 className="text-2xl font-semibold mb-6 text-white">Ingredients</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {ingredients.map((ingredient) => (
+              {recipe.ingredients.map((ingredient) => (
                 <div 
                   key={ingredient.name}
                   className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-200"
@@ -140,77 +136,19 @@ export default function RecipeDetail() {
          <section>
           <h2 className="text-2xl font-bold mb-6 text-white">Cooking Instructions</h2>
           <div className="space-y-8">
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
-                1
-              </div>
-              <div className="flex-grow">
-                <p className="text-lg mb-4">Heat a large pot of salted water to boiling on high. Wash and dry the fresh produce.</p>
-                <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                  <Image src="/images/steps/boiling-water.png" alt="Boiling water" fill className="object-cover" />
+            {recipe.steps.map((step) => (
+              <div key={step.number} className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
+                  {step.number}
+                </div>
+                <div className="flex-grow">
+                  <p className="text-lg mb-4">{step.instruction}</p>
+                  <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                    <Image src={step.image} alt={`Step ${step.number}`} fill className="object-cover" />
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
-                2
-              </div>
-              <div className="flex-grow">
-                <p className="text-lg mb-4">Cut the sweet pepper into thin strips. Halve the tomatoes. Quarter the lemon.</p>
-                <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                  <Image src="/images/steps/cut-vegetables.png" alt="Cut vegetables" fill className="object-cover" />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
-                3
-              </div>
-              <div className="flex-grow">
-                <p className="text-lg mb-4">Add orzo to the pot of boiling water. Cook 7 to 9 minutes, or until tender. Drain thoroughly.</p>
-                <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                  <Image src="/images/steps/cooking-orzo.png" alt="Cooking orzo" fill className="object-cover" />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
-                4
-              </div>
-              <div className="flex-grow">
-                <p className="text-lg mb-4">While the orzo cooks, in a large pan, cook the beef on medium-high with salt and pepper, breaking it up with a spoon, 4 to 5 minutes.</p>
-                <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                  <Image src="/images/steps/cooking-beef.png" alt="Cooking beef" fill className="object-cover" />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
-                5
-              </div>
-              <div className="flex-grow">
-                <p className="text-lg mb-4">Add the pepper strips to the pan; season with salt and pepper. Cook, stirring occasionally, 2 to 3 minutes. Add tomatoes and spinach; cook until spinach is wilted.</p>
-                <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                  <Image src="/images/steps/cooking-vegetables.png" alt="Cooking vegetables" fill className="object-cover" />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
-                6
-              </div>
-              <div className="flex-grow">
-                <p className="text-lg mb-4">Add the cooked orzo to the pan. Squeeze the juice of 2 lemon wedges over the dish. Stir to combine. Top with feta cheese and serve with remaining lemon wedges.</p>
-                <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                  <Image src="/images/steps/final-dish.png" alt="Final dish" fill className="object-cover" />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
       </main>
