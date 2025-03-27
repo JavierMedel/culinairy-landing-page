@@ -4,6 +4,12 @@ import Image from 'next/image';
 import CulinAIryLogo from '@/components/CulinAIryLogo';
 import recipesData from '@/lib/recipes.json';
 
+export async function generateStaticParams() {
+  return recipesData.recipes.map((recipe) => ({
+    id: recipe.id
+  }));
+}
+
 interface Ingredient {
   name: string;
   image: string;
