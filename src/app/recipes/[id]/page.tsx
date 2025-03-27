@@ -2,7 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import CulinAIryLogo from '@/components/CulinAIryLogo';
+import { Metadata } from 'next';
 import recipesData from '@/lib/recipes.json';
+
+export const metadata: Metadata = {
+  title: 'Recipe Details - CulinAIry.io',
+  description: 'Detailed recipe with ingredients and instructions - CulinAIry.io'
+};
 
 export async function generateStaticParams() {
   return recipesData.recipes.map((recipe) => ({
@@ -36,12 +42,11 @@ interface Recipe {
   steps: Step[];
 }
 
-export default function RecipeDetail({ 
-  params 
-}: {
-  params: { id: string }
-}) {
-  const recipe = recipesData.recipes.find((r): r is Recipe => r.id === decodeURIComponent(params.id));
+// Define the component with proper typing for Next.js App Router
+export default function RecipeDetail({ params }: { params: { id: string } }) {
+  // In Next.js App Router, params is directly accessible in async components
+  const id = params.id;
+  const recipe = recipesData.recipes.find((r): r is Recipe => r.id === decodeURIComponent(id));
   if (!recipe) return <div>Recipe not found</div>;
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
@@ -171,4 +176,4 @@ export default function RecipeDetail({
       </footer>
     </div>
   );
-}
+};

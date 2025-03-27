@@ -20,7 +20,7 @@ const Hero = () => {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]);
   return (
     <section className="w-full py-12 md:py-24 flex flex-col items-center justify-center text-center">
       <div className="w-full flex flex-col items-center justify-center">
