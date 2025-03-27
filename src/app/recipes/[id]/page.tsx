@@ -30,13 +30,11 @@ interface Recipe {
   steps: Step[];
 }
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function RecipeDetail({ params }: PageProps) {
+export default function RecipeDetail({ 
+  params 
+}: {
+  params: { id: string }
+}) {
   const recipe = recipesData.recipes.find((r): r is Recipe => r.id === decodeURIComponent(params.id));
   if (!recipe) return <div>Recipe not found</div>;
   return (
