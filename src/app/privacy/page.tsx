@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderWithTransparency from '@/components/HeaderWithTransparency';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - CulinAIry.io',

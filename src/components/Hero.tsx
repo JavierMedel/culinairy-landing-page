@@ -47,7 +47,7 @@ const Hero = () => {
             duration: 0.6,
             ease: "easeOut",
           }}
-          className="text-culinairy-lightGray max-w-xl mx-auto mb-8 text-lg"
+          className="dark:text-culinairy-lightGray text-culinairy-darkTeal max-w-xl mx-auto mb-8 text-lg font-medium"
         >
           Effortless meal planning with AI-curated recipes, step-by-step visual guides, and smart shopping lists. CulinAIry.io adapts to your tastes, making cooking simple, fun, and inspiring.
         </motion.p>
