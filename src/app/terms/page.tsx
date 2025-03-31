@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import CulinAIryioLogo from '@/components/CulinAIryioLogo';
+import HeaderWithTransparency from '@/components/HeaderWithTransparency';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,13 +10,7 @@ export const metadata: Metadata = {
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
-      <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center">
-            <CulinAIryioLogo />
-          </Link>
-        </div>
-      </header>
+      <HeaderWithTransparency showNav={false} showWaitlist={false} />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8 text-white">Terms of Service</h1>

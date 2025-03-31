@@ -1,13 +1,38 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import CulinAIryioLogo from './CulinAIryioLogo';
 import EmailPopup from '@/components/EmailPopup';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check in case page is loaded scrolled down
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800 bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue fixed top-0 left-0 right-0 z-50">
+    <header 
+      className={`w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
+        ? 'bg-gradient-to-r from-culinairy-darkTeal/90 to-culinairy-darkBlue/90 backdrop-blur-sm' 
+        : 'bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue'}`}
+    >
       <div className="flex items-center">
         <Link href="/" className="flex items-center">
           <CulinAIryioLogo />

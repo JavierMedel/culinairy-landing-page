@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '@/components/Header';
+import HeaderWithTransparency from '@/components/HeaderWithTransparency';
 import Hero from '@/components/Hero';
 import ComparisonSection from '@/components/ComparisonSection';
 import FeaturesSection from '@/components/FeaturesSection';
@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col pt-16">
-      <Header />
+      <HeaderWithTransparency />
       <Hero />
       <ComparisonSection />
       <FeaturesSection />
