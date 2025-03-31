@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import CulinAIryLogo from '@/components/CulinAIryLogo';
+import CulinAIryioLogo from '@/components/CulinAIryioLogo';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ const TermsOfService = () => {
       <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <CulinAIryLogo />
+            <CulinAIryioLogo />
           </Link>
         </div>
       </header>

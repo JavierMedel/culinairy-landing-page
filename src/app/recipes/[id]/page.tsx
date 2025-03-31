@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import CulinAIryLogo from '@/components/CulinAIryLogo';
+import CulinAIryioLogo from '@/components/CulinAIryioLogo';
 import { Metadata } from 'next';
 import recipesData from '@/lib/recipes.json';
 
@@ -54,15 +54,15 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
   if (!recipe) return <div>Recipe not found</div>;
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
-      <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800">
+      <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800 fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue">
         <div className="flex items-center">
           <Link href="/recipes" className="flex items-center">
-            <CulinAIryLogo />
+            <CulinAIryioLogo />
           </Link>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-12">
+      <main className="max-w-7xl mx-auto px-4 py-12 pt-24">
         <div className="mb-12">
           <Link 
             href="/recipes" 
@@ -147,16 +147,18 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
         </div>
          {/* Cooking Steps */}
          <section>
-          <h2 className="text-2xl font-bold mb-6 text-white">Cooking Instructions</h2>
+          <h2 className="text-2xl font-bold mb-6 text-white">Cooking Steps</h2>
           <div className="space-y-8">
             {recipe.steps.map((step) => (
               <div key={step.number} className="flex gap-6">
                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
                   {step.number}
                 </div>
-                <div className="flex-grow">
-                  <p className="text-lg mb-4">{step.instruction}</p>
-                  <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                  <div>
+                    <p className="text-lg">{step.instruction}</p>
+                  </div>
+                  <div className="relative w-full h-48 md:h-64 rounded-lg overflow-hidden">
                     <Image src={step.image} alt={`Step ${step.number}`} fill className="object-cover" />
                   </div>
                 </div>

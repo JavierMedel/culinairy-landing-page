@@ -7,6 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "CulinAIry.io - AI-Powered Meal Planning",
   description: "CulinAIry.io is an AI-powered meal planning service that creates personalized meal plans based on your preferences, dietary restrictions, and available ingredients.",
+  icons: {
+    icon: '/images/icon.ico',
+    shortcut: '/images/icon.ico',
+    apple: '/images/icon.ico',
+  },
   openGraph: {
     title: "CulinAIry.io - AI-Powered Meal Planning",
     description: "CulinAIry.io is an AI-powered meal planning service that creates personalized meal plans based on your preferences, dietary restrictions, and available ingredients.",

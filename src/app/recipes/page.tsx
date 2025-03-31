@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import CulinAIryLogo from '@/components/CulinAIryLogo';
+import CulinAIryioLogo from '@/components/CulinAIryioLogo';
 import { Metadata } from 'next';
 import recipesData from '@/lib/recipes.json';
 
@@ -15,15 +15,15 @@ const recipes = recipesData.recipes;
 const RecipesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
-      <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800">
+      <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800 fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <CulinAIryLogo />
+            <CulinAIryioLogo />
           </Link>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-12">
+      <main className="max-w-7xl mx-auto px-4 py-12 pt-24">
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-4 text-white">AI-Powered Recipes</h1>
           <p className="text-gray-400 text-lg">

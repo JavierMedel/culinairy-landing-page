@@ -22,10 +22,10 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [images.length]);
   return (
-    <section className="w-full py-12 md:py-24 flex flex-col items-center justify-center text-center">
+    <section className="w-full py-12 md:py-24 pt-16 flex flex-col items-center justify-center text-center">
       <div className="w-full flex flex-col items-center justify-center">
         <div className="inline-flex items-center rounded-full px-3 py-1 text-sm bg-gray-800/70 text-culinairy-lightGray mb-6">
-          AI-Powered Meal Assistant
+          AI-Powered, Effortless Meal Planning.
         </div>
         <motion.h1 
           initial={{ opacity: 0.5, y: 100 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-culinairy-teal to-culinairy-cyan max-w-4xl mb-4"
         >
-          CulinAIry.io – Smart<br />AI-Powered Meal Planning
+          CulinAIry.io – AI-Powered<br />Effortless Meal Planning.
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 50 }}

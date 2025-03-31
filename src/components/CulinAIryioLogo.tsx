@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CulinAIryLogo = () => {
+const CulinAIryioLogo = () => {
   return (
     <div className="flex items-center">
       <span className="text-3xl font-bold tracking-tight">
@@ -13,4 +13,4 @@ const CulinAIryLogo = () => {
   );
 };
 
-export default CulinAIryLogo;
+export default CulinAIryioLogo;
