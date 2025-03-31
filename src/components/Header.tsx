@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import CulinAIryioLogo from './CulinAIryioLogo';
 import EmailPopup from '@/components/EmailPopup';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,14 +40,14 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4">
-        <nav className="hidden md:flex items-center justify-center space-x-6 mr-4 text-white">
+        <nav className="hidden md:flex items-center justify-center space-x-6 mr-4 text-white dark:text-white text-culinairy-darkBlue">
           <a
             href="#features"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
+            className="hover:text-culinairy-teal transition-colors cursor-pointer font-medium"
           >
             Features
           </a>
@@ -56,17 +57,18 @@ const Header = () => {
               e.preventDefault();
               document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
+            className="hover:text-culinairy-teal transition-colors cursor-pointer font-medium"
           >
             FAQs
           </a>
           <Link
             href="/recipes"
-            className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
+            className="hover:text-culinairy-teal transition-colors cursor-pointer font-medium"
           >
             Recipes
           </Link>
         </nav>
+        <ThemeToggle />
         <EmailPopup triggerText="Join Waitlist" />
       </div>
     </header>

@@ -14,13 +14,13 @@ const recipes = recipesData.recipes;
 
 const RecipesPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-200">
       <HeaderWithTransparency showNav={false} />
 
       <main className="max-w-7xl mx-auto px-4 py-12 pt-24">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4 text-white">AI-Powered Recipes</h1>
-          <p className="text-gray-400 text-lg">
+          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">AI-Powered Recipes</h1>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
             Discover delicious recipes tailored to your taste preferences and dietary needs.
           </p>
         </div>
@@ -30,7 +30,7 @@ const RecipesPage = () => {
               <Link
                 key={recipe.id}
                 href={`/recipes/${encodeURIComponent(recipe.id)}`}
-              className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 block"
+              className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 block border border-gray-200 dark:border-gray-700"
             >
               <div className="relative h-48 w-full">
                 <Image
@@ -41,8 +41,8 @@ const RecipesPage = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">{recipe.title}</h3>
-                <p className="text-gray-400 mb-4">{recipe.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{recipe.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{recipe.description}</p>
                 
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="flex items-center">
@@ -99,7 +99,7 @@ const RecipesPage = () => {
                   {recipe.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-sm bg-gray-700 text-gray-200 rounded-full"
+                      className="px-3 py-1 text-sm bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full"
                     >
                       {tag}
                     </span>
@@ -111,21 +111,21 @@ const RecipesPage = () => {
         </div>
       </main>
 
-      <footer className="w-full py-6 px-4 border-t border-gray-800 mt-12">
+      <footer className="w-full py-6 px-4 border-t border-gray-200 dark:border-gray-800 mt-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-500 text-sm mb-4 md:mb-0">
+          <div className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} CulinAIry.io. All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm">
-            <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/terms" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
               Terms
             </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/privacy" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
               Privacy
             </Link>
             <a
               href="mailto:hello@culinairy.ai"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
             >
               Contact
             </a>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import CulinAIryioLogo from './CulinAIryioLogo';
 import EmailPopup from '@/components/EmailPopup';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface HeaderWithTransparencyProps {
   showNav?: boolean;
@@ -41,9 +42,9 @@ const HeaderWithTransparency = ({
 
   return (
     <header 
-      className={`w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
-        ? 'bg-gradient-to-r from-culinairy-darkTeal/90 to-culinairy-darkBlue/90 backdrop-blur-sm' 
-        : 'bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue'}`}
+      className={`w-full py-4 px-4 md:px-8 flex items-center justify-between border-b dark:border-gray-800 border-gray-200 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
+        ? 'dark:bg-gradient-to-r dark:from-culinairy-darkTeal/90 dark:to-culinairy-darkBlue/90 bg-gradient-to-r from-white/90 to-culinairy-lightGray/30 backdrop-blur-sm' 
+        : 'dark:bg-gradient-to-r dark:from-culinairy-darkTeal dark:to-culinairy-darkBlue bg-gradient-to-r from-white to-culinairy-lightGray/50'}`}
     >
       <div className="flex items-center">
         <Link href={backLink || "/"} className="flex items-center">
@@ -60,14 +61,14 @@ const HeaderWithTransparency = ({
       </div>
       <div className="flex items-center space-x-4">
         {showNav && (
-          <nav className="hidden md:flex items-center justify-center space-x-6 mr-4 text-white">
+          <nav className="hidden md:flex items-center justify-center space-x-6 mr-4 dark:text-white text-culinairy-darkBlue">
             <a
               href="#features"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
+              className="hover:text-culinairy-teal transition-colors cursor-pointer font-medium"
             >
               Features
             </a>
@@ -77,18 +78,19 @@ const HeaderWithTransparency = ({
                 e.preventDefault();
                 document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
+              className="hover:text-culinairy-teal transition-colors cursor-pointer font-medium"
             >
               FAQs
             </a>
             <Link
               href="/recipes"
-              className="hover:text-culinairy-lightTeal transition-colors cursor-pointer font-medium"
+              className="hover:text-culinairy-teal transition-colors cursor-pointer font-medium"
             >
               Recipes
             </Link>
           </nav>
         )}
+        <ThemeToggle />
         {showWaitlist && <EmailPopup triggerText="Join Waitlist" />}
       </div>
     </header>

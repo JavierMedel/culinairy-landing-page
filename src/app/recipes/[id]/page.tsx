@@ -53,14 +53,14 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
   const recipe = await getRecipeById(decodeURIComponent(id));
   if (!recipe) return <div>Recipe not found</div>;
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-200">
       <HeaderWithTransparency showNav={false} backLink="/recipes" backLinkText="Back to Recipes" />
 
       <main className="max-w-7xl mx-auto px-4 py-12 pt-24">
         <div className="mb-12">
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="relative aspect-square rounded-lg overflow-hidden">
+            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
               <Image
                 src={recipe.image}
                 alt={recipe.title}
@@ -70,11 +70,11 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
             </div>
 
             <div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{recipe.title}</h1>
-              <p className="text-gray-400 text-lg mb-6">{recipe.description}</p>
+              <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">{recipe.title}</h1>
+              <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">{recipe.description}</p>
 
-              <div className="bg-gray-700/30 rounded-lg p-6 mb-8">
-              <p className="text-gray-300 leading-relaxed">
+              <div className="bg-gray-100/80 dark:bg-gray-700/30 rounded-lg p-6 mb-8 border border-gray-200 dark:border-gray-700">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 {recipe.detailedDescription}
               </p>
               </div>
@@ -101,21 +101,21 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
               </div>
 
               <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 text-sm bg-gray-700 text-gray-200 rounded-full">Family Friendly</span>
-                <span className="px-3 py-1 text-sm bg-gray-700 text-gray-200 rounded-full">Quick</span>
+                <span className="px-3 py-1 text-sm bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full">Family Friendly</span>
+                <span className="px-3 py-1 text-sm bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full">Quick</span>
               </div>
             </div>
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-semibold mb-6 text-white">Ingredients</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Ingredients</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {recipe.ingredients.map((ingredient) => (
                 <div 
                   key={ingredient.name}
-                  className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-200"
+                  className="bg-white dark:bg-gray-800 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-700 shadow-sm"
                 >
-                  <div className="relative w-1/2 mx-auto aspect-square mb-3 rounded-lg overflow-hidden bg-gray-700">
+                  <div className="relative w-1/2 mx-auto aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
                     <Image
                       src={ingredient.image}
                       alt={ingredient.name}
@@ -123,8 +123,8 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="text-sm font-medium text-white mb-1">{ingredient.name}</h3>
-                  <p className="text-xs text-gray-400">{ingredient.amount}</p>
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-1">{ingredient.name}</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">{ingredient.amount}</p>
                 </div>
               ))}
             </div>
@@ -132,7 +132,7 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
         </div>
          {/* Cooking Steps */}
          <section>
-          <h2 className="text-2xl font-bold mb-6 text-white">Cooking Steps</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Cooking Steps</h2>
           <div className="space-y-8">
             {recipe.steps.map((step) => (
               <div key={step.number} className="flex gap-6">
@@ -141,9 +141,9 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
                 </div>
                 <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                   <div>
-                    <p className="text-lg">{step.instruction}</p>
+                    <p className="text-lg text-gray-800 dark:text-gray-200">{step.instruction}</p>
                   </div>
-                  <div className="relative w-full h-48 md:h-64 rounded-lg overflow-hidden">
+                  <div className="relative w-full h-48 md:h-64 rounded-lg overflow-hidden shadow-md">
                     <Image src={step.image} alt={`Step ${step.number}`} fill className="object-cover" />
                   </div>
                 </div>
@@ -153,15 +153,15 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
         </section>
       </main>
 
-      <footer className="w-full py-6 px-4 border-t border-gray-800 mt-12">
+      <footer className="w-full py-6 px-4 border-t border-gray-200 dark:border-gray-800 mt-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-500 text-sm mb-4 md:mb-0">
+          <div className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} CulinAIry.io All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm">
-            <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms</Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy</Link>
-            <a href="mailto:hello@culinairy.ai" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+            <Link href="/terms" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Terms</Link>
+            <Link href="/privacy" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Privacy</Link>
+            <a href="mailto:hello@culinairy.ai" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Contact</a>
           </div>
         </div>
       </footer>
