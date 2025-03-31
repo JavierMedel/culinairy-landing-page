@@ -48,8 +48,8 @@ async function getRecipeById(id: string) {
 // Define the component with proper typing for Next.js App Router
 export default async function RecipeDetail({ params }: { params: { id: string } }) {
   const { id } = await params;
-  console.log('Recipe ID:', id);
-  console.log('Params:', params);
+  // console.log('Recipe ID:', id);
+  // console.log('Params:', params);
   const recipe = await getRecipeById(decodeURIComponent(id));
   if (!recipe) return <div>Recipe not found</div>;
   return (
