@@ -16,35 +16,70 @@ export async function generateStaticParams() {
   }));
 }
 
+// Updated interfaces based on recipes.json structure
 interface Ingredient {
   name: string;
-  image: string;
-  amount: string;
+  quantity: string;
+  allergens?: string[]; // Optional as not always present
+  image_url: string;
 }
 
 interface Step {
-  number: number;
-  instruction: string;
-  image: string;
+  step: number;
+  description: string;
+  image_url?: string; // Optional as not always present
 }
 
 interface Recipe {
   id: string;
   title: string;
+  subtitle?: string; // Optional
   description: string;
-  image: string;
-  cookTime: string;
-  prepTime: string;
-  calories: number;
-  tags: string[];
-  detailedDescription: string;
+  prep_time?: string; // Optional
+  cooking_time?: string; // Optional
+  total_time?: string; // Optional
+  servings?: string; // Optional
+  difficulty?: string; // Optional
+  serving_size?: string; // Optional
+  calories_per_serving?: string; // Optional
+  dietary_info?: string; // Optional
   ingredients: Ingredient[];
-  steps: Step[];
+  not_included_in_delivery?: Ingredient[]; // Optional
+  cooking_steps: Step[];
+  nutrition_values?: NutritionValues; // Use specific type
+  tags?: string[]; // Optional
+  image_url: string;
+  cousine?: string; // Optional
+  pdf_url?: string; // Optional
 }
 
-async function getRecipeById(id: string) {
-  return recipesData.recipes.find((r): r is Recipe => r.id === id);
+// Interface for the nested nutrition details
+interface PerServingNutrition {
+  calories?: string;
+  fat?: string;
+  saturated_fat?: string;
+  carbohydrate?: string;
+  sugar?: string;
+  dietary_fiber?: string;
+  protein?: string;
+  cholesterol?: string;
+  sodium?: string;
+  potassium?: string;
+  calcium?: string;
+  iron?: string;
 }
+
+// Interface for the main nutrition_values object
+interface NutritionValues {
+  per_serving?: PerServingNutrition;
+}
+
+// Removed problematic type predicate
+async function getRecipeById(id: string): Promise<Recipe | undefined> {
+  // Find function implicitly returns Recipe | undefined based on JSON structure
+  return recipesData.recipes.find((r) => r.id === id);
+}
+
 // Define the component with proper typing for Next.js App Router
 export default async function RecipeDetail({ params }: { params: { id: string } }) {
   const { id } = await params;
@@ -62,7 +97,7 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
               <Image
-                src={recipe.image}
+                src={recipe.image_url} // Use image_url
                 alt={recipe.title}
                 fill
                 className="object-cover"
@@ -71,38 +106,51 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
 
             <div>
               <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">{recipe.title}</h1>
-              <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">{recipe.description}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">{recipe.subtitle || recipe.description}</p> 
+              {/* Use subtitle if available, otherwise description */}
 
               <div className="bg-gray-100/80 dark:bg-gray-700/30 rounded-lg p-6 mb-8 border border-gray-200 dark:border-gray-700">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {recipe.detailedDescription}
+                {recipe.description} 
+                {/* Use description here */}
               </p>
               </div>
 
               <div className="flex items-center space-x-4 mb-8">
+                {/* Use correct properties from JSON */}
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 text-culinairy-teal mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-sm">25 min</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 text-culinairy-cyan mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <span className="text-sm">8 min</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 text-culinairy-teal mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                  <span className="text-sm">800 kcal</span>
+                  {recipe.total_time && (
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-culinairy-teal mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span className="text-sm">{recipe.total_time}</span>
+                    </div>
+                  )}
+                  {recipe.prep_time && (
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-culinairy-cyan mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                      <span className="text-sm">Prep: {recipe.prep_time}</span>
+                    </div>
+                  )}
+                  {recipe.calories_per_serving && (
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-culinairy-teal mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                      <span className="text-sm">{recipe.calories_per_serving}</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 text-sm bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full">Family Friendly</span>
-                <span className="px-3 py-1 text-sm bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full">Quick</span>
+                {/* Use recipe.tags */}
+                {recipe.tags?.map((tag) => (
+                  <span key={tag} className="px-3 py-1 text-sm bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full">{tag}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -117,35 +165,43 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
                 >
                   <div className="relative w-1/2 mx-auto aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
                     <Image
-                      src={ingredient.image}
+                      src={ingredient.image_url} // Use image_url
                       alt={ingredient.name}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-1">{ingredient.name}</h3>
-                  <p className="text-xs text-gray-600 dark:text-gray-400">{ingredient.amount}</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">{ingredient.quantity}</p> 
+                  {/* Use quantity */}
                 </div>
               ))}
             </div>
           </div>
         </div>
          {/* Cooking Steps */}
+         {/* Cooking Steps - Use recipe.cooking_steps */}
          <section>
           <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Cooking Steps</h2>
           <div className="space-y-8">
-            {recipe.steps.map((step) => (
-              <div key={step.number} className="flex gap-6">
+            {recipe.cooking_steps.map((step) => (
+              <div key={step.step} className="flex gap-6">
                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
-                  {step.number}
+                  {step.step} 
+                  {/* Use step.step */}
                 </div>
-                <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                  <div>
-                    <p className="text-lg text-gray-800 dark:text-gray-200">{step.instruction}</p>
-                  </div>
-                  <div className="relative w-full h-48 md:h-64 rounded-lg overflow-hidden shadow-md">
-                    <Image src={step.image} alt={`Step ${step.number}`} fill className="object-cover" />
-                  </div>
+                <div className="flex-1">
+                  <p className="text-gray-700 dark:text-gray-300">{step.description}</p> 
+                  {/* Use step.description */}
+                  {step.image_url && ( // Use step.image_url
+                    <Image
+                      src={step.image_url}
+                      alt={`Step ${step.step}`}
+                      width={750}
+                      height={500}
+                      className="mt-4 rounded-lg"
+                    />
+                  )}
                 </div>
               </div>
             ))}
