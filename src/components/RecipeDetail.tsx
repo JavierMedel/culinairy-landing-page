@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import { Recipe, Ingredient, Step } from '../../types/Recipe';
+
 export function RecipeDetail({ recipe }: { recipe: Recipe }) {
   return (
     <div className="recipe-detail">
@@ -19,7 +22,7 @@ export function RecipeDetail({ recipe }: { recipe: Recipe }) {
       <section className="ingredients-section">
         <h3>Ingredients</h3>
         <div className="ingredients-grid">
-          {recipe.ingredients.map(ingredient => (
+          {recipe.ingredients.map((ingredient: Ingredient) => (
             <div key={ingredient.name} className="ingredient-card">
               {ingredient.image_url && (
                 <Image
@@ -39,7 +42,7 @@ export function RecipeDetail({ recipe }: { recipe: Recipe }) {
 
       <section className="cooking-steps">
         <h3>Instructions</h3>
-        {recipe.cooking_steps.map(step => (
+        {recipe.cooking_steps.map((step: Step) => (
           <div key={step.step} className="step-card">
             <div className="step-number">Step {step.step}</div>
             {step.image_url && (

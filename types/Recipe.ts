@@ -1,6 +1,14 @@
-interface NutritionValues {
-  calories: string;
-  fat: string;
+// Add Ingredient interface based on usage
+export interface Ingredient {
+  name: string;
+  quantity: string;
+  allergens?: string[];
+  image_url: string;
+}
+
+export interface NutritionValues {
+  calories?: string; // Make optional based on previous usage
+  fat?: string; // Make optional
   saturated_fat: string;
   carbohydrate: string;
   sugar: string;
@@ -10,41 +18,44 @@ interface NutritionValues {
   sodium: string;
   potassium: string;
   calcium: string;
-  iron: string;
+  iron?: string; // Make optional
 }
 
-interface CookingStep {
+// Rename to Step to match usage in RecipeDetail.tsx
+export interface Step {
   step: number;
   description: string;
-  image_url: string;
+  image_url?: string; // Make optional
 }
 
-interface NotIncludedItem {
+// NotIncludedItem seems similar to Ingredient, maybe consolidate or keep separate if needed
+export interface NotIncludedItem {
   name: string;
   quantity: string;
   image_url: string;
 }
 
-interface Recipe {
+export interface Recipe {
   id: string;
   title: string;
-  subtitle: string;
+  subtitle?: string; // Make optional
   description: string;
-  prep_time: string;
-  cooking_time: string;
-  total_time: string;
-  servings: string;
-  difficulty: string;
-  serving_size: string;
-  calories_per_serving: string;
-  dietary_info: string;
+  prep_time?: string; // Make optional
+  cooking_time?: string; // Make optional
+  total_time?: string; // Make optional
+  servings?: string; // Make optional
+  difficulty?: string; // Make optional
+  serving_size?: string; // Make optional
+  calories_per_serving?: string; // Make optional
+  dietary_info?: string; // Make optional
   ingredients: Ingredient[];
-  not_included_in_delivery: NotIncludedItem[];
-  cooking_steps: CookingStep[];
-  nutrition_values: {
-    per_serving: NutritionValues;
+  not_included_in_delivery?: NotIncludedItem[]; // Make optional
+  cooking_steps: Step[]; // Use Step type
+  nutrition_values?: { // Make optional
+    per_serving?: NutritionValues; // Make optional
   };
-  tags: string[];
+  tags?: string[]; // Make optional
   image_url: string;
-  cousine: string;
+  cousine?: string; // Make optional
+  pdf_url?: string; // Add optional pdf_url based on previous usage
 }

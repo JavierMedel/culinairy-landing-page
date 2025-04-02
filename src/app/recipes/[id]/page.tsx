@@ -74,18 +74,17 @@ interface NutritionValues {
   per_serving?: PerServingNutrition;
 }
 
-// Removed problematic type predicate
 async function getRecipeById(id: string): Promise<Recipe | undefined> {
-  // Find function implicitly returns Recipe | undefined based on JSON structure
   return recipesData.recipes.find((r) => r.id === id);
 }
 
-// Define the component with proper typing for Next.js App Router
-export default async function RecipeDetail({ params }: { params: { id: string } }) {
-  const { id } = await params;
-  // console.log('Recipe ID:', id);
-  // console.log('Params:', params);
-  const recipe = await getRecipeById(decodeURIComponent(id));
+export default async function RecipeDetail({
+  params
+}: {
+  params: { id: string }
+}) {
+  const id = decodeURIComponent(params.id);
+  const recipe = await getRecipeById(id);
   if (!recipe) return <div>Recipe not found</div>;
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-200">
@@ -97,7 +96,7 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
               <Image
-                src={recipe.image_url} // Use image_url
+                src={recipe.image_url}
                 alt={recipe.title}
                 fill
                 className="object-cover"
@@ -148,7 +147,7 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
 
               <div className="flex flex-wrap gap-2 mb-8">
                 {/* Use recipe.tags */}
-                {recipe.tags?.map((tag) => (
+              {recipe.tags?.map((tag: string) => (
                   <span key={tag} className="px-3 py-1 text-sm bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full">{tag}</span>
                 ))}
               </div>
@@ -158,14 +157,14 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
           <div className="mt-12">
             <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Ingredients</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {recipe.ingredients.map((ingredient) => (
+              {recipe.ingredients.map((ingredient: Ingredient) => (
                 <div 
                   key={ingredient.name}
                   className="bg-white dark:bg-gray-800 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-700 shadow-sm"
                 >
                   <div className="relative w-1/2 mx-auto aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
                     <Image
-                      src={ingredient.image_url} // Use image_url
+                      src={ingredient.image_url}
                       alt={ingredient.name}
                       fill
                       className="object-cover"
@@ -184,7 +183,7 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
          <section>
           <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Cooking Steps</h2>
           <div className="space-y-8">
-            {recipe.cooking_steps.map((step) => (
+            {recipe.cooking_steps.map((step: Step) => (
               <div key={step.step} className="flex gap-6">
                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-culinairy-teal text-white font-bold text-xl">
                   {step.step} 
@@ -195,7 +194,7 @@ export default async function RecipeDetail({ params }: { params: { id: string } 
                   {/* Use step.description */}
                   {step.image_url && ( // Use step.image_url
                     <Image
-                      src={step.image_url}
+                      src={step.image_url || '/images/steps/default-step.png'}
                       alt={`Step ${step.step}`}
                       width={750}
                       height={500}
