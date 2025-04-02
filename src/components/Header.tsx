@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-gray-800 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
+      className={`w-full py-4 px-4 md:px-8 flex items-center justify-between border-b border-culinairy-teal fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
         ? 'bg-gradient-to-r from-culinairy-darkTeal/90 to-culinairy-darkBlue/90 backdrop-blur-sm' 
         : 'bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue'}`}
     >

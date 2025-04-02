@@ -25,7 +25,7 @@ const Hero = () => {
     <section className="w-full py-12 md:py-24 pt-16 flex flex-col items-center justify-center text-center">
       <div className="w-full flex flex-col items-center justify-center">
         <div className="inline-flex items-center rounded-full px-3 py-1 text-sm bg-gray-800/70 text-culinairy-lightGray mb-6">
-          AI-Powered, Effortless Meal Planning.
+        Effortless AI Meal Planning.
         </div>
         <motion.h1 
           initial={{ opacity: 0.5, y: 100 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-culinairy-teal to-culinairy-cyan max-w-4xl mb-4"
         >
-          CulinAIry.io – AI-Powered<br />Effortless Meal Planning.
+          CulinAIry.io – Effortless AI Meal Planning,<br />Picture It. Cook It. Enjoy It.
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 50 }}
@@ -49,7 +49,7 @@ const Hero = () => {
           }}
           className="dark:text-culinairy-lightGray text-culinairy-darkTeal max-w-xl mx-auto mb-8 text-lg font-medium"
         >
-          Effortless meal planning with AI-curated recipes, step-by-step visual guides, and smart shopping lists. CulinAIry.io adapts to your tastes, making cooking simple, fun, and inspiring.
+          Ditch the meal-planning stress! Get optimized recipes, step-by-step visual guides, and auto-generated shopping lists—all powered by AI to match your taste and preferences. Turn everyday cooking into a seamless, fun, and inspiring experience.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
