@@ -81,11 +81,13 @@ async function getRecipeById(id: string): Promise<Recipe | undefined> {
 export default async function RecipeDetail({
   params
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }) {
-  const id = decodeURIComponent(params.id);
+  const { id } = await params;
   const recipe = await getRecipeById(id);
+  
   if (!recipe) return <div>Recipe not found</div>;
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-200">
       <HeaderWithTransparency showNav={false} backLink="/recipes" backLinkText="Back to Recipes" />
