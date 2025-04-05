@@ -38,7 +38,7 @@ const CTASection = () => {
   return (
     <section className="w-full py-16 px-4 bg-gradient-to-r from-culinairy-darkTeal to-culinairy-darkBlue rounded-3xl mx-auto max-w-6xl my-12 border border-culinairy-teal/30">
       <div className="flex flex-col items-center text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 max-w-2xl leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 max-w-2xl leading-tight text-white dark:text-white">
           Stop spending hours planning<br />your weekly meals
         </h2>
         <p className="text-culinairy-lightGray mb-8 max-w-xl">
