@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { notFound } from 'next/navigation'; // Import notFound
 import HeaderWithTransparency from '@/components/HeaderWithTransparency';
 import { Metadata } from 'next';
 import recipesData from '@/lib/recipes.json';
@@ -33,9 +34,11 @@ export default async function RecipeDetail({
 }) {
   const { id } = await params;
   const recipe = await getRecipeById(id);
-  
-  if (!recipe) return <div>Recipe not found</div>;
-  
+
+  if (!recipe) {
+    notFound(); // Use notFound() to trigger the 404 page
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-200">
       <HeaderWithTransparency showNav={false} backLink="/recipes" backLinkText="Back to Recipes" />
