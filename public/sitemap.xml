@@ -9,167 +9,42 @@
 
 <url>
   <loc>https://www.culinairy.io/</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.culinairy.io/recipes</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.culinairy.io/terms</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.culinairy.io/privacy</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.culinairy.io/recipes/beef-and-roasted-red-pepper-ragu</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.culinairy.io/recipes/cal-smart-tex-mex-beef-bowls</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <loc>https://www.culinairy.io/recipes/spiced-beef-koftas-with-veggie-hash</loc>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-beef-koftas</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <loc>https://www.culinairy.io/recipes/chicken-caesar-salad-chickpea-croutons</loc>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-chicken-caesar-salad</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-lemon-cream-chicken</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-lemon-cream-chicken-breast-tenders</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-lemon-cream-chicken-thigh</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-lemon-cream-chicken-thighs</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-roasted-pork-tenderloin</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/carb-smart-spinach-feta-pork-patties</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/charred-shrimp-skewers</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/chicken-and-creamy-cheese-tortellini-and-mushrooms</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/chicken-and-creamy-chive-sauce</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/chicken-tikka-masala</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/chicken-tikka-masala-curry</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/creamy-cheese-tortellini-and-mushrooms</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/creamy-garlic-salmon-penne</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/creamy-pesto-orzo-and-chicken</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/creamy-pesto-pork-rigatoni</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/creamy-rigatoni-plant-based-chicken</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/creamy-rigatoni-with-chicken-breast</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/creamy-rigatoni-with-italian-chicken-sausage</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/harvest-bolognese-pasta</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/roasted-dill-garlic-salmon</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/smart-esquites-bacon-and-corn-chowder</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/smart-roasted-pork-tenderloin</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/stovetop-pastitsio-inspired-fusilli</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/taco-style-beef-bowl</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.culinairy.io/recipes/taco-style-beef-bowls</loc>
-  <lastmod>2025-04-03T13:36:42+00:00</lastmod>
+  <loc>https://www.culinairy.io/recipes/lemon-cream-chicken-with-zucchini</loc>
+  <lastmod>2025-04-07T02:37:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
