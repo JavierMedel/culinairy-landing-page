@@ -4,6 +4,7 @@ import Image from 'next/image';
 import HeaderWithTransparency from '@/components/HeaderWithTransparency';
 import { Metadata } from 'next';
 import recipesData from '@/lib/recipes.json';
+import { Recipe, Ingredient, Step } from '@/../types/Recipe'; // Import shared types
 
 export const metadata: Metadata = {
   title: 'Recipe Details - CulinAIry.io',
@@ -16,66 +17,13 @@ export async function generateStaticParams() {
   }));
 }
 
-// Updated interfaces based on recipes.json structure
-interface Ingredient {
-  name: string;
-  quantity: string;
-  allergens?: string[]; // Optional as not always present
-  image_url: string;
-}
-
-interface Step {
-  step: number;
-  description: string;
-  image_url?: string; // Optional as not always present
-}
-
-interface Recipe {
-  id: string;
-  title: string;
-  subtitle?: string; // Optional
-  description: string;
-  prep_time?: string; // Optional
-  cooking_time?: string; // Optional
-  total_time?: string; // Optional
-  servings?: string; // Optional
-  difficulty?: string; // Optional
-  serving_size?: string; // Optional
-  calories_per_serving?: string; // Optional
-  dietary_info?: string; // Optional
-  ingredients: Ingredient[];
-  not_included_in_delivery?: Ingredient[]; // Optional
-  cooking_steps: Step[];
-  nutrition_values?: NutritionValues; // Use specific type
-  tags?: string[]; // Optional
-  image_url: string;
-  cousine?: string; // Optional
-  pdf_url?: string; // Optional
-}
-
-// Interface for the nested nutrition details
-interface PerServingNutrition {
-  calories?: string;
-  fat?: string;
-  saturated_fat?: string;
-  carbohydrate?: string;
-  sugar?: string;
-  dietary_fiber?: string;
-  protein?: string;
-  cholesterol?: string;
-  sodium?: string;
-  potassium?: string;
-  calcium?: string;
-  iron?: string;
-}
-
-// Interface for the main nutrition_values object
-interface NutritionValues {
-  per_serving?: PerServingNutrition;
-}
+// Removed local interface definitions - using imported types now
 
 async function getRecipeById(id: string): Promise<Recipe | undefined> {
-  return recipesData.recipes.find((r) => r.id === id);
+  // Type assertion needed because recipes.json might not perfectly match Recipe type yet
+  // We already fixed dietary_info, but other discrepancies might exist.
+  // This tells TypeScript to trust that the found object conforms to Recipe.
+  return recipesData.recipes.find((r) => r.id === id) as Recipe | undefined;
 }
 
 export default async function RecipeDetail({

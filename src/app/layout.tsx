@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script"; // Import next/script
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -39,10 +40,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09L7370ZX"></script>
-        <script
+      {/* Remove <head> tag, Next.js handles this */}
+      <body className={`${inter.className} bg-background min-h-screen antialiased`} suppressHydrationWarning>
+        {/* Google Tag Manager - Global site tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-J09L7370ZX"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -52,8 +59,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${inter.className} bg-background min-h-screen antialiased`} suppressHydrationWarning>
         <ThemeProvider defaultTheme="dark">
           {children}
         </ThemeProvider>
