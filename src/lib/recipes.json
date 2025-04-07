@@ -1,0 +1,1037 @@
+{
+    "recipes": [
+        {
+            "id": "beef-and-roasted-red-pepper-ragu",
+            "id_legacy": "beef-and-roasted-red-pepper-ragu",
+            "title": "Herby Beef and Roasted Red Pepper Ragu",
+            "subtitle": "with Spaghetti and Parmesan Cheese",
+            "description": "This hearty twist on spaghetti bolognese features tender ground beef, sweet roasted red peppers, and a herby tomato base, finished with a generous sprinkle of Parmesan. Packed with flavor and sure to satisfy!",
+            "prep_time": "25 minutes",
+            "cooking_time": "8 minutes",
+            "total_time": "33 minutes",
+            "servings": "2",
+            "difficulty": "Medium",
+            "serving_size": "1 plate",
+            "calories_per_serving": "770 kcal",
+            "dietary_category": ["High-Protein"],
+            "dietary_info": {
+              "allergens": ["Sulphites", "Wheat", "Milk"],
+              "may_contain": ["Sesame", "Eggs", "Fish", "Shellfish", "Crustaceans", "Mustard", "Tree nuts", "Peanuts", "Soybean"]
+            },
+            "ingredients": [
+              {
+                "name": "Ground Beef",
+                "quantity": "250 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e5855d1101bf6720606fdc-f89a8727.png"
+              },
+              {
+                "name": "Sweet Bell Pepper",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5c1a8527c445fa1c487319b2-35ee6fcd.png"
+              },
+              {
+                "name": "Italian Seasoning",
+                "quantity": "4.3 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/675856748e49d3d7ba0b4528-376ddc50.png"
+              },
+              {
+                "name": "Crushed Tomatoes with Garlic and Onion",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5a972e97ae08b50985677592-2726edc5.png"
+              },
+              {
+                "name": "Spaghetti",
+                "quantity": "170 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65ef1e0d4916f82b1a902316-e2208f6b.png"
+              },
+              {
+                "name": "Parmesan Cheese, shredded",
+                "quantity": "1/4 cup",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/57110772f8b25ebd2e8b4625-8ffea243.png"
+              },
+              {
+                "name": "Chili Flakes",
+                "quantity": "4 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/66b387201047ce9880458ebc-bc66ac76.png"
+              },
+              {
+                "name": "Beef Broth Concentrate",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/57110777f8b25ebd2e8b46a4-4424c626.png"
+              },
+              {
+                "name": "Tomato Sauce Base",
+                "quantity": "2 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/66a7defd296f17bc1e121b9e-5102e5d3.png"
+              },
+              {
+                "name": "Garlic Salt",
+                "quantity": "2 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/66b388e96d92980d0360c946-62a53812.png"
+              }
+            ],
+            "Everyday_Ingredients": [
+              {
+                "name": "Salt",
+                "quantity": "1/8 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e6f882f5a5196d85e9b826-83082ef0.png"
+              },
+              {
+                "name": "Sugar",
+                "quantity": "1/4 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e6f8861101bf672060a1db-e29767a1.png"
+              },
+              {
+                "name": "Oil",
+                "quantity": "1/2 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e6f87c1101bf672060a1c3-6893ff30.png"
+              },
+              {
+                "name": "Pepper",
+                "quantity": "1/4 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5711077ef8b25ebd2e8b473c-716de0eb.png"
+              }
+            ],
+            "cooking_steps": [
+              {
+                "step": 1,
+                "title": "Boil the Spaghetti",
+                "description": "Bring a large pot with 10 cups water and 2 tsp salt to a boil. Add spaghetti and cook uncovered, stirring occasionally, for 10–12 minutes. Drain and return to the same pot off heat.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673ca0be410266f3b3acdba8/step-99fd3700.jpg",
+                "utensils": [
+                  {
+                    "name": "Large Pot",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Strainer",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "title": "Roast the Peppers",
+                "description": "Core and chop the sweet pepper into 1/2-inch pieces. Toss with oil, salt, and pepper on a baking sheet. Roast at 450°F for 14–15 minutes, stirring halfway through.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673ca0be410266f3b3acdba8/step-78af0610.jpg",
+                "utensils": [
+                  {
+                    "name": "Baking Sheet",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "title": "Cook the Beef",
+                "description": "Heat a large non-stick pan over medium-high heat. Add beef and cook, breaking it up, for 4–5 minutes until no pink remains. Drain fat. Season with garlic salt and pepper.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673ca0be410266f3b3acdba8/step-a657f320.jpg",
+                "utensils": [
+                  {
+                    "name": "Non-Stick Pan",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Wooden Spoon",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "title": "Build the Sauce",
+                "description": "Add tomato sauce base and Italian seasoning to the pan. Stir for 1 minute. Add crushed tomatoes, broth concentrate, and sugar. Add roasted peppers. Simmer 5–6 minutes until thickened. Season with garlic salt and pepper.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673ca0be410266f3b3acdba8/step-f401b730.jpg",
+                "utensils": []
+              },
+              {
+                "step": 5,
+                "title": "Finish and Serve",
+                "description": "Pour sauce over the spaghetti in the pot. Toss to coat. Divide into plates and top with Parmesan and chili flakes (if desired).",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673ca0be410266f3b3acdba8/step-b57b6140.jpg",
+                "utensils": []
+              }
+            ],
+            "utensils": [
+              {
+                "name": "Large Pot",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Strainer",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Non-Stick Pan",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Baking Sheet",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Wooden Spoon",
+                "quantity": "1",
+                "image_url": ""
+              }
+            ],
+            "oven": {
+              "needed": "Yes",
+              "temperature": "450°F",
+              "time": "15 minutes"
+            },
+            "storage_reheating": {
+              "storage": "Store in an airtight container in the fridge for up to 3 days.",
+              "reheating": "Reheat in the microwave for 2–3 minutes or on the stovetop over medium heat until warmed through."
+            },
+            "nutrition_values": {
+              "per_serving": {
+                "calories": "770 kcal",
+                "fat": "26 g",
+                "protein": "43 g",
+                "carbohydrates": "93 g",
+                "sugar": "17 g",
+                "fiber": "9 g",
+                "sodium": "1240 mg"
+              }
+            },
+            "tags": ["Quick", "High-Protein", "Comfort Food"],
+            "image_url": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R1014_W51_CA_RB152035-16_Main__1low-4fbbd833.jpg",
+            "cuisine": "Italian"
+          },
+          {
+            "id": "spiced-beef-koftas-with-veggie-hash",
+            "id_legacy": "carb-smart-beef-koftas",
+            "title": "Spiced Beef Koftas with Veggie Hash",
+            "subtitle": "and Garlic Hummus",
+            "low_carbs": true,
+            "description": "Inspired by mezze platters, this dish features spiced beef koftas alongside a golden veggie hash packed with peppers, carrots, and zucchini, all topped with creamy garlic hummus for a flavorful and satisfying meal.",
+            "prep_time": "20 minutes",
+            "cooking_time": "8 minutes",
+            "total_time": "28 minutes",
+            "servings": "4",
+            "difficulty": "Medium",
+            "serving_size": "1 plate (approx. 400g)",
+            "calories_per_serving": "840 kcal",
+            "dietary_category": ["Low-Carb", "High-Protein"],
+            "dietary_info": {
+              "allergens": ["Wheat", "Gluten", "Milk", "Sesame", "Egg", "Mustard", "Sulphites"],
+              "may_contain": ["Soy", "Fish", "Crustaceans", "Peanuts", "Tree nuts"]
+            },
+            "ingredients": [
+              {
+                "name": "Ground Beef",
+                "quantity": "250 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e5855d1101bf6720606fdc-f89a8727.png"
+              },
+              {
+                "name": "Hummus",
+                "quantity": "4 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/6725850ecfb28a28105739dd-44bda02f.png"
+              },
+              {
+                "name": "Carrot",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e5854e762a70483e9d8ce9-1f167c7d.png"
+              },
+              {
+                "name": "Sweet Bell Pepper",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5c1a8527c445fa1c487319b2-35ee6fcd.png"
+              },
+              {
+                "name": "Parsley",
+                "quantity": "7 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e58561762a70483e9d8f68-b874122f.png"
+              },
+              {
+                "name": "Dukkah Spice",
+                "quantity": "7 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65f1c52d97477827aca4f245-4c97b2ce.png"
+              },
+              {
+                "name": "Zucchini",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e5855af5a5196d85e97eca-bc03eec2.png"
+              },
+              {
+                "name": "Garlic",
+                "quantity": "2 cloves",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e5856ef5a5196d85e98159-6bc5fc53.png"
+              },
+              {
+                "name": "Mayonnaise",
+                "quantity": "2 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/6724fc7ba598974dca32235c-1ea539b0.png"
+              },
+              {
+                "name": "Panko Breadcrumbs",
+                "quantity": "1/3 cup",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/667c810c4510917eadbc58d0-20702300.png"
+              },
+              {
+                "name": "Feta Cheese",
+                "quantity": "1/4 cup",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/57110775f8b25ebd2e8b4677-dec4ab3c.png"
+              },
+              {
+                "name": "Tahini Sauce",
+                "quantity": "2 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/6725851bcfb28a2810573a52-9dd949bb.png"
+              },
+              {
+                "name": "Couscous",
+                "quantity": "1/4 cup",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65ef267a4916f82b1a902798-5b5e8662.png"
+              }
+            ],
+            "Everyday_Ingredients": [
+              {
+                "name": "Salt",
+                "quantity": "0.63 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e6f882f5a5196d85e9b826-83082ef0.png"
+              },
+              {
+                "name": "Pepper",
+                "quantity": "0.25 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5711077ef8b25ebd2e8b473c-716de0eb.png"
+              },
+              {
+                "name": "Vegetable Oil",
+                "quantity": "2 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/65e6f87c1101bf672060a1c3-6893ff30.png"
+              }
+            ],
+            "cooking_steps": [
+              {
+                "step": 1,
+                "title": "Prepare Couscous and Vegetables",
+                "description": "Preheat oven to 450°F. In a medium pot, bring 1/2 cup water and 1/8 tsp salt to a boil. Remove from heat, add couscous, stir, cover and let stand for 5 minutes. Meanwhile, halve zucchini lengthwise and cut into 1/4-inch half-moons. Core and dice bell pepper into 1/2-inch pieces. Peel and cut carrot into 1/2-inch rounds.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673e0a1cdd37d34956af0bf5/step-89ac5d00.jpg",
+                "utensils": [
+                  {
+                    "name": "Medium pot",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Cutting board",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Chef's knife",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "title": "Make Kofta Mixture",
+                "description": "Mince garlic and chop parsley. In a bowl, combine ground beef, Dukkah Spice, panko, half the garlic, half the parsley, 1/4 tsp salt, and pepper. Mix well and form into 6 (or 12 for 4 servings) 2-inch logs.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673e0a1cdd37d34956af0bf5/step-1d91e710.jpg",
+                "utensils": [
+                  {
+                    "name": "Mixing bowl",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Measuring spoons",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "title": "Roast Koftas and Carrots",
+                "description": "Arrange koftas on one side of a parchment-lined baking sheet. On the other side, toss carrots with 1 tbsp oil, salt, and pepper. Roast for 12-16 minutes until carrots are tender and koftas are cooked through.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673e0a1cdd37d34956af0bf5/step-02937920.jpg",
+                "utensils": [
+                  {
+                    "name": "Baking sheet",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Parchment paper",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "title": "Cook Veggie Hash",
+                "description": "Heat oil in a large pan over medium-high. Add zucchini and peppers, season with salt, and cook for 6-8 minutes, stirring often, until tender-crisp.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673e0a1cdd37d34956af0bf5/step-ac791f30.jpg",
+                "utensils": [
+                  {
+                    "name": "Large non-stick pan",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Spatula",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 5,
+                "title": "Prepare Garlic Hummus",
+                "description": "In a small bowl, mix hummus, half the tahini sauce, mayonnaise, 2 tsp water, and remaining garlic. Season with salt and pepper.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673e0a1cdd37d34956af0bf5/step-23198440.jpg",
+                "utensils": [
+                  {
+                    "name": "Small bowl",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Whisk",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 6,
+                "title": "Plate and Serve",
+                "description": "Fluff couscous and season. Divide couscous, veggie hash, and roasted carrots between plates. Top with koftas, spoon garlic hummus over, and sprinkle with feta and remaining parsley.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/673e0a1cdd37d34956af0bf5/step-0d892a50.jpg",
+                "utensils": [
+                  {
+                    "name": "Serving plates",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Serving spoon",
+                    "image_url": ""
+                  }
+                ]
+              }
+            ],
+            "utensils": [
+              {
+                "name": "Medium pot",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Cutting board",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Chef's knife",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Mixing bowl",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Measuring spoons",
+                "quantity": "1 set",
+                "image_url": ""
+              },
+              {
+                "name": "Baking sheet",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Parchment paper",
+                "quantity": "1 sheet",
+                "image_url": ""
+              },
+              {
+                "name": "Large non-stick pan",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Spatula",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Small bowl",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Whisk",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Serving plates",
+                "quantity": "4",
+                "image_url": ""
+              },
+              {
+                "name": "Serving spoon",
+                "quantity": "1",
+                "image_url": ""
+              }
+            ],
+            "oven": {
+              "needed": "Yes",
+              "temperature": "450°F",
+              "time": "12-16 minutes"
+            },
+            "storage_reheating": {
+              "storage": "Store components separately in airtight containers in the fridge for up to 3 days.",
+              "reheating": "Reheat koftas and vegetables in the microwave for 1-2 minutes or in a 350°F oven for 10 minutes until warmed through."
+            },
+            "nutrition_values": {
+              "per_serving": {
+                "calories": "840 kcal",
+                "fat": "54 g",
+                "protein": "38 g",
+                "carbohydrates": "47 g",
+                "sugar": "12 g",
+                "fiber": "8 g",
+                "sodium": "1560 mg"
+              }
+            },
+            "tags": ["Quick", "Mediterranean", "High-Protein"],
+            "image_url": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R1021_W27_CA_RB153453-21_Main_low-58477df1.jpg",
+            "cuisine": "Mediterranean"
+          },
+          {
+            "id": "chicken-caesar-salad-chickpea-croutons",
+            "id_legacy": "carb-smart-chicken-caesar-salad",
+            "title": "Chicken Caesar Salad with Chickpea Croutons",
+            "subtitle": "and Lemon Parmesan Dressing",
+            "low_carbs": true,
+            "description": "A protein-packed twist on the classic Caesar salad featuring golden roasted chickpeas instead of croutons, tender chicken breast, and a zesty lemon-Parmesan dressing over fresh baby spinach.",
+            "prep_time": "30 minutes",
+            "cooking_time": "15 minutes",
+            "total_time": "45 minutes",
+            "servings": "4",
+            "difficulty": "Medium",
+            "serving_size": "1 serving (approx. 350g)",
+            "calories_per_serving": "750 kcal",
+            "dietary_category": ["High-Protein", "Low-Carb"],
+            "dietary_info": {
+              "allergens": ["Egg", "Mustard", "Milk"],
+              "may_contain": ["Sesame", "Fish", "Shellfish", "Crustaceans", "Tree nuts", "Peanuts", "Wheat", "Soybean", "Sulphites"]
+            },
+            "ingredients": [
+              {
+                "name": "Chicken Breasts",
+                "quantity": "2 units",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/5715013bfd2cb9c71f8b4568.png"
+              },
+              {
+                "name": "Chickpeas",
+                "quantity": "370 mL",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/554a4024f8b25e1d268b4570.png"
+              },
+              {
+                "name": "Baby Spinach",
+                "quantity": "113 g",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/577ec99e3933dc33508b4567.png"
+              },
+              {
+                "name": "Lemon",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/554a302ffd2cb9324b8b4569.png"
+              },
+              {
+                "name": "Mayonnaise",
+                "quantity": "4 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/554a2f494dab71636c8b4569.png"
+              },
+              {
+                "name": "Parmesan Cheese",
+                "quantity": "1/4 cup",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/606ed9241c6c855ddb0c743b-45a42476.png"
+              },
+              {
+                "name": "Garlic",
+                "quantity": "1 clove",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/6137677a256fc53c23222228-c6553cc2.png"
+              },
+              {
+                "name": "Dijon Mustard",
+                "quantity": "1.5 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5ea33bb3b51a9a08711358d8-001a44ce.png"
+              },
+              {
+                "name": "Chicken Salt",
+                "quantity": "1 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/6177ff1fc6637801005337a4-cbd88b3e.png"
+              }
+            ],
+            "Everyday_Ingredients": [
+              {
+                "name": "Vegetable Oil",
+                "quantity": "2.5 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/57110777f8b25ebd2e8b46a2-c505cf3d.png"
+              },
+              {
+                "name": "Black Pepper",
+                "quantity": "0.13 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5711077ef8b25ebd2e8b473c-716de0eb.png"
+              }
+            ],
+            "cooking_steps": [
+              {
+                "step": 1,
+                "title": "Prep Ingredients",
+                "description": "Preheat oven to 425°F. Drain and rinse chickpeas, then pat dry. Zest and juice half the lemon (cut remaining into wedges). Peel and mince garlic.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6214e05fa94fc8613534de07/step-60452682.jpg",
+                "utensils": [
+                  {
+                    "name": "Cutting board",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Chef's knife",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Paper towels",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "title": "Cook Chicken",
+                "description": "Season chicken with half the chicken salt and pepper. Heat oil in a pan over medium-high. Sear chicken 1-2 min per side until golden, then transfer to baking sheet. Bake for 12-14 min until cooked through.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6214e05fa94fc8613534de07/step-cb3b0a2b.jpg",
+                "utensils": [
+                  {
+                    "name": "Large non-stick pan",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Baking sheet",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Tongs",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "title": "Roast Chickpeas",
+                "description": "In same pan, heat oil over medium. Add chickpeas and remaining chicken salt. Season with pepper. Cook covered for 5-6 min, stirring occasionally, until golden. Transfer to plate.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6214e05fa94fc8613534de07/step-b9c06b72.jpg",
+                "utensils": [
+                  {
+                    "name": "Large non-stick pan",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Spatula",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "title": "Make Dressing",
+                "description": "In large bowl, combine mayo, Dijon, lemon zest, half the Parmesan, 1 tsp lemon juice, and garlic. Season with pepper and mix well.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6214e05fa94fc8613534de07/step-ccfd668b.jpg",
+                "utensils": [
+                  {
+                    "name": "Large mixing bowl",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Whisk",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 5,
+                "title": "Assemble Salad",
+                "description": "Add roasted chickpeas and spinach to bowl with dressing. Toss to coat evenly.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6214e05fa94fc8613534de07/step-d62e4a13.jpg",
+                "utensils": [
+                  {
+                    "name": "Salad tongs",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 6,
+                "title": "Finish and Serve",
+                "description": "Slice rested chicken and add to salad. Toss gently. Divide between plates, sprinkle with remaining Parmesan, and serve with lemon wedges.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6214e05fa94fc8613534de07/step-73db29cb.jpg",
+                "utensils": [
+                  {
+                    "name": "Serving plates",
+                    "image_url": ""
+                  }
+                ]
+              }
+            ],
+            "utensils": [
+              {
+                "name": "Cutting board",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Chef's knife",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Large non-stick pan",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Baking sheet",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Tongs",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Spatula",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Large mixing bowl",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Whisk",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Salad tongs",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Serving plates",
+                "quantity": "4",
+                "image_url": ""
+              },
+              {
+                "name": "Measuring spoons",
+                "quantity": "1 set",
+                "image_url": ""
+              },
+              {
+                "name": "Zester",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Juicer",
+                "quantity": "1",
+                "image_url": ""
+              }
+            ],
+            "oven": {
+              "needed": "Yes",
+              "temperature": "425°F",
+              "time": "12-14 minutes"
+            },
+            "storage_reheating": {
+              "storage": "Store components separately in airtight containers in the fridge for up to 3 days.",
+              "reheating": "Reheat chicken separately in microwave for 1-2 minutes or enjoy salad cold."
+            },
+            "nutrition_values": {
+              "per_serving": {
+                "calories": "750 kcal",
+                "fat": "48 g",
+                "protein": "50 g",
+                "carbohydrates": "33 g",
+                "sugar": "6 g",
+                "fiber": "11 g",
+                "sodium": "1520 mg"
+              }
+            },
+            "tags": ["High-Protein", "Quick", "Salad"],
+            "image_url": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/carb-smart-chicken-caesar-salad-1f55ccd7.jpg",
+            "cuisine": "American"
+          },
+          {
+            "id": "lemon-cream-chicken-with-zucchini",
+            "id_legacy": "carb-smart-lemon-cream-chicken",
+            "title": "Lemon Cream Chicken with Zucchini",
+            "subtitle": "and Roasted Peppers",
+            "low_carbs": true,
+            "description": "Tender chicken breasts in a luxurious lemon cream sauce served with roasted zucchini and bell peppers - a light yet satisfying low-carb meal bursting with fresh flavors.",
+            "prep_time": "25 minutes",
+            "cooking_time": "22 minutes",
+            "total_time": "47 minutes",
+            "servings": "4",
+            "difficulty": "Medium",
+            "serving_size": "1 plate (approx. 400g)",
+            "calories_per_serving": "530 kcal",
+            "dietary_category": ["Low-Carb", "High-Protein"],
+            "dietary_info": {
+              "allergens": ["Milk"],
+              "may_contain": ["Sesame", "Eggs", "Fish", "Shellfish", "Crustaceans", "Mustard", "Tree nuts", "Peanuts", "Wheat", "Soybean", "Sulphites"]
+            },
+            "ingredients": [
+              {
+                "name": "Chicken Breasts",
+                "quantity": "2 units",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/5715013bfd2cb9c71f8b4568.png"
+              },
+              {
+                "name": "Zucchini",
+                "quantity": "2 units",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/5553981df8b25e5d0c8b456a.png"
+              },
+              {
+                "name": "Sweet Bell Pepper",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5c1a8527c445fa1c487319b2-35ee6fcd.png"
+              },
+              {
+                "name": "Garlic",
+                "quantity": "1 clove",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/6137677a256fc53c23222228-c6553cc2.png"
+              },
+              {
+                "name": "Dill-Garlic Spice Blend",
+                "quantity": "1 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5ef0ce0f8530d62e2242a8fc-7d1cccb1.png"
+              },
+              {
+                "name": "Lemon",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/image/554a302ffd2cb9324b8b4569.png"
+              },
+              {
+                "name": "Heavy Cream",
+                "quantity": "56 mL",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5e7275a22fe1c61a46604095-80da39b4.png"
+              },
+              {
+                "name": "Chicken Broth Concentrate",
+                "quantity": "1 unit",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5755e5e9f8b25e45148b4567-d6ad65dc.png"
+              },
+              {
+                "name": "Lemon-Pepper Seasoning",
+                "quantity": "1 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/6234e2661eb0a87142174af2-2cc08f20.png"
+              }
+            ],
+            "Everyday_Ingredients": [
+              {
+                "name": "Unsalted Butter",
+                "quantity": "1 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5bc5064e30006c1a261b4612-4ffc3691.png"
+              },
+              {
+                "name": "Vegetable Oil",
+                "quantity": "1.5 tbsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/57110777f8b25ebd2e8b46a2-c505cf3d.png"
+              },
+              {
+                "name": "Salt",
+                "quantity": "0.13 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/57110778f8b25ebd2e8b46bc-ea83c952.png"
+              },
+              {
+                "name": "Black Pepper",
+                "quantity": "0.06 tsp",
+                "image_url": "https://img.hellofresh.com/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/ingredient/5711077ef8b25ebd2e8b473c-716de0eb.png"
+              }
+            ],
+            "cooking_steps": [
+              {
+                "step": 1,
+                "title": "Prep Vegetables and Lemon",
+                "description": "Preheat oven to 425°F. Cut zucchini into 1/4-inch rounds. Core and cut bell pepper into 1-inch pieces. Mince garlic. Zest half the lemon and cut into wedges.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6578339ad19c1d228e0e47bb/step-b714988c.jpg",
+                "utensils": [
+                  {
+                    "name": "Cutting board",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Chef's knife",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Zester",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 2,
+                "title": "Roast Vegetables",
+                "description": "Toss zucchini and peppers with oil, salt, pepper, and Dill-Garlic Spice Blend on a baking sheet. Roast for 5 minutes.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6578339ad19c1d228e0e47bb/step-c982f2fe.jpg",
+                "utensils": [
+                  {
+                    "name": "Baking sheet",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Mixing spoon",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 3,
+                "title": "Cook Chicken",
+                "description": "Season chicken with salt and Lemon-Pepper Seasoning. Sear in oiled pan over medium-high heat for 1-2 minutes per side until golden.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6578339ad19c1d228e0e47bb/step-93955880.jpg",
+                "utensils": [
+                  {
+                    "name": "Large non-stick pan",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Tongs",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 4,
+                "title": "Finish Roasting",
+                "description": "Add chicken to baking sheet with partially roasted vegetables. Continue roasting for 10-12 minutes until chicken is cooked through.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6578339ad19c1d228e0e47bb/step-d1664883.jpg",
+                "utensils": [
+                  {
+                    "name": "Baking sheet",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 5,
+                "title": "Make Lemon Cream Sauce",
+                "description": "In same pan, melt butter and sauté garlic. Add water, cream, broth concentrate, and remaining seasoning. Simmer until slightly thickened, then stir in half the lemon zest.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6578339ad19c1d228e0e47bb/step-faa801cd.jpg",
+                "utensils": [
+                  {
+                    "name": "Saucepan",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Whisk",
+                    "image_url": ""
+                  }
+                ]
+              },
+              {
+                "step": 6,
+                "title": "Plate and Serve",
+                "description": "Toss roasted vegetables with remaining lemon zest. Slice chicken and serve with vegetables, drizzled with lemon cream sauce. Garnish with lemon wedges.",
+                "image_url": "https://img.hellofresh.com/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3/6578339ad19c1d228e0e47bb/step-c0c39007.jpg",
+                "utensils": [
+                  {
+                    "name": "Serving plates",
+                    "image_url": ""
+                  },
+                  {
+                    "name": "Tongs",
+                    "image_url": ""
+                  }
+                ]
+              }
+            ],
+            "utensils": [
+              {
+                "name": "Cutting board",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Chef's knife",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Baking sheet",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Large non-stick pan",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Tongs",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Mixing spoon",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Zester",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Saucepan",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Whisk",
+                "quantity": "1",
+                "image_url": ""
+              },
+              {
+                "name": "Measuring spoons",
+                "quantity": "1 set",
+                "image_url": ""
+              },
+              {
+                "name": "Serving plates",
+                "quantity": "4",
+                "image_url": ""
+              }
+            ],
+            "oven": {
+              "needed": "Yes",
+              "temperature": "425°F",
+              "time": "15-17 minutes total"
+            },
+            "storage_reheating": {
+              "storage": "Store components separately in airtight containers in the refrigerator for up to 3 days.",
+              "reheating": "Reheat chicken and vegetables in a 350°F oven for 10-12 minutes or in the microwave for 1-2 minutes. Sauce can be reheated gently on the stovetop."
+            },
+            "nutrition_values": {
+              "per_serving": {
+                "calories": "530 kcal",
+                "fat": "32 g",
+                "protein": "43 g",
+                "carbohydrates": "19 g",
+                "sugar": "10 g",
+                "fiber": "5 g",
+                "sodium": "820 mg"
+              }
+            },
+            "tags": ["Low-Carb", "High-Protein", "Quick"],
+            "image_url": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/poulet-et-sauce-cremeuse-au-citron-0d289552.jpg",
+            "cuisine": "Contemporary"
+          }
+        ]  
+    }
