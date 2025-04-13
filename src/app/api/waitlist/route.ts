@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
-import supabase from '@/lib/supabase';
+import supabaseAdmin from '@/lib/supabase-admin';
 
 export async function POST(request: Request) {
   try {
@@ -13,26 +12,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create a Supabase client with the service role key for server-side operations
-    // This bypasses RLS policies
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
-    
-    // Log for debugging (will be removed in production)
-    console.log('Supabase URL:', supabaseUrl);
-    console.log('Service Key exists:', !!supabaseServiceKey);
-    
-    if (!supabaseUrl || !supabaseServiceKey) {
-      console.error('Missing Supabase credentials');
-      return NextResponse.json(
-        { error: 'Server configuration error' },
-        { status: 500 }
-      );
-    }
-    
-    const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
-
-    // Store the email in Supabase using the admin client
+    // Store the email in Supabase using the admin client with service role permissions
     const { error, data } = await supabaseAdmin
       .from('waitlist')
       .insert([{ email, created_at: new Date().toISOString() }]);
@@ -60,6 +40,30 @@ export async function POST(request: Request) {
         { error: 'Failed to join waitlist: ' + error.message },
         { status: 500 }
       );
+    }
+
+    // Trigger the welcome email sending
+    try {
+      // We need the full URL for server-side fetch
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `http://localhost:${process.env.PORT || 3000}`;
+      const emailResponse = await fetch(`${baseUrl}/api/email/waitlist`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!emailResponse.ok) {
+        const errorData = await emailResponse.json();
+        console.error('Failed to trigger welcome email:', emailResponse.status, errorData);
+        // Don't block the user response if email fails, just log it
+      } else {
+        console.log('Welcome email triggered successfully for:', email);
+      }
+    } catch (emailError) {
+      console.error('Error triggering welcome email:', emailError);
+      // Don't block the user response if email fails, just log it
     }
     
     return NextResponse.json(

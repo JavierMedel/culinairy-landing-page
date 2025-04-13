@@ -38,6 +38,9 @@ const EmailPopup = ({ triggerText, isLoading = false }: EmailPopupProps) => {
       console.log('API response:', { status: response.status, data });
 
       if (response.ok) {
+        // The /api/waitlist route now handles triggering the email send.
+        // No need to call /api/email/waitlist from the frontend anymore.
+
         setStatus('success');
         setMessage(data.message || 'Successfully joined the waitlist!');
         setEmail('');
